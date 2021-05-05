@@ -1,0 +1,9 @@
+# Name of the Graph:
+SIMPLEGRAPH
+# Number of Nodes:
+2
+# Number of Edges:
+2
+
+0:1
+1:0

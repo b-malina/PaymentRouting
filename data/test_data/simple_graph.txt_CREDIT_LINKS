@@ -1,0 +1,12 @@
+# Graph Property Class
+treeembedding.credit.CreditLinks
+# Key
+CREDIT_LINKS
+0 1 -10 0 20
+0 2 -10 0 10
+1 4 -5 0 5
+2 3 -15 0 15
+2 4 -10 0 10
+3 4 -5 0 5
+3 5 -10 0 5
+4 5 -5 0 5

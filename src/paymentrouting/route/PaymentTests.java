@@ -24,69 +24,69 @@ import paymentrouting.route.fee.RoutePaymentFees;
 public class PaymentTests {
 
 	public static void main(String[] args) {
-		Config.overwrite("SKIP_EXISTING_DATA_FOLDERS", ""+false);//run even if results already exist 
-		runSimpleTestSynthetic(); 
-	
+		Config.overwrite("SERIES_GRAPH_WRITE", ""+true);
+		Config.overwrite("SKIP_EXISTING_DATA_FOLDERS", "" + false);//run even if results already exist
+//		runSimpleTestSynthetic();
+		runSimpleTest();
 	}
-	
+
 	/**
-	 * test for simple no-concurrency no-dynamic PaymentRoute with existing data set 
+	 * test for simple no-concurrency no-dynamic PaymentRoute with existing data set
 	 */
 	public static void runSimpleTest() {
-		//read test files with 5 nodes, 3 transactions 
-		Network net = new ReadableFile("DS", "DS", "data/simple/simple2_graph.txt", null);
+		//read test files with 5 nodes, 3 transactions
+//		Network net = new ReadableFile("DS", "DS", "data/test_data/small_graph.txt", null);
+		Network net = new ReadableFile("DS", "DS", "data/test_data/simple_graph.txt", null);
 		//generate distance functions
 		DistanceFunction hop = new HopDistance();
 		DistanceFunction speedyMulti = new SpeedyMurmursMulti(2); //Interdimensional SpeedyMurmurs with two trees 
 		int trials = 1; // only one attempt
-		boolean up = false; //no dymanic updates of balances  
-        Metric[] m = new Metric[] {new RoutePayment(new ClosestNeighbor(hop),trials,up), //no splitting, HopDistance 
-				                   new RoutePayment(new ClosestNeighbor(speedyMulti),trials,up), //no splitting, Interdimensional SpeedyMurmurs 
-				                   new RoutePayment(new SplitIfNecessary(hop),trials,up), //split if necessary, HopDistance 
-				                   new RoutePayment(new SplitIfNecessary(speedyMulti),trials,up), //split if necessary, Interdimensional SpeedyMurmurs
-				                   new RoutePayment(new SplitClosest(hop),trials,up), //split by dist, HopDistance 
-				                   new RoutePayment(new SplitClosest(speedyMulti),trials,up), //split by dist, Interdimensional SpeedyMurmurs
-				                   new RoutePayment(new RandomSplit(hop),trials,up), //random splitting, HopDistance 
-				                   new RoutePayment(new RandomSplit(speedyMulti),trials,up) //random splitting, Interdimensional SpeedyMurmurs
-                                   }; 
-		Series.generate(net, m, 1); 
+		boolean up = false; //no dymanic updates of balances
+		Metric[] m = new Metric[]{new RoutePayment(new ClosestNeighbor(hop), trials, up), //no splitting, HopDistance
+				new RoutePayment(new ClosestNeighbor(speedyMulti), trials, up), //no splitting, Interdimensional SpeedyMurmurs
+				new RoutePayment(new SplitIfNecessary(hop), trials, up), //split if necessary, HopDistance
+				new RoutePayment(new SplitIfNecessary(speedyMulti), trials, up), //split if necessary, Interdimensional SpeedyMurmurs
+				new RoutePayment(new SplitClosest(hop), trials, up), //split by dist, HopDistance
+				new RoutePayment(new SplitClosest(speedyMulti), trials, up), //split by dist, Interdimensional SpeedyMurmurs
+				new RoutePayment(new RandomSplit(hop), trials, up), //random splitting, HopDistance
+				new RoutePayment(new RandomSplit(speedyMulti), trials, up), //random splitting, Interdimensional SpeedyMurmurs
+//				new MALIMETRIC(new )
+		};
+		Series.generate(net, m, 1);
 	}
-	
+
 	public static void runSimpleTestSynthetic() {
-        //generate transformations to add i) capacities and ii) transactions 
-		Transformation[] trans = new Transformation[] { new InitCapacities(200, -1, BalDist.EXP), 
+		//generate transformations to add i) capacities and ii) transactions
+		Transformation[] trans = new Transformation[]{new InitCapacities(200, -1, BalDist.EXP),
 				//exponentially distributed capacities with average value 200 (middle value is variance, which is not relevant for exponential)
-				new Transactions(20, -1, TransDist.EXP, false, 15, false, false) 
+				new Transactions(20, -1, TransDist.EXP, false, 15, false, false)
 				// 15 transactions with expontially distributed values with average 20 (again -1 is variance, not needed for exp), 
 				//no cutoff, no concrete timestamp, no restriction to transactions guaranteed to be successful 
-		        };
+		};
 		Network net = new BarabasiAlbert(30, 3, trans);//scale-free barabasi-albert graph with 30 nodes, each new node forming three links to existing nodes
 		// generate distance functions
 		DistanceFunction hop = new HopDistance();
 		DistanceFunction speedyMulti = new SpeedyMurmursMulti(2); // Interdimensional SpeedyMurmurs with two trees
 		int trials = 1; // only one attempt
 		boolean up = false; // no dymanic updates of balances
-		Metric[] m = new Metric[] { new RoutePayment(new ClosestNeighbor(hop), trials, up), // no splitting, HopDistance
+		Metric[] m = new Metric[]{new RoutePayment(new ClosestNeighbor(hop), trials, up), // no splitting, HopDistance
 				new RoutePayment(new ClosestNeighbor(speedyMulti), trials, up), // no splitting, Interdimensional
-																				// SpeedyMurmurs
+				// SpeedyMurmurs
 				new RoutePayment(new SplitIfNecessary(hop), trials, up), // split if necessary, HopDistance
 				new RoutePayment(new SplitIfNecessary(speedyMulti), trials, up), // split if necessary, Interdimensional
-																					// SpeedyMurmurs
+				// SpeedyMurmurs
 				new RoutePayment(new SplitClosest(hop), trials, up), // split by dist, HopDistance
 				new RoutePayment(new SplitClosest(speedyMulti), trials, up), // split by dist, Interdimensional
-																				// SpeedyMurmurs
+				// SpeedyMurmurs
 				new RoutePayment(new RandomSplit(hop), trials, up), // random splitting, HopDistance
 				new RoutePayment(new RandomSplit(speedyMulti), trials, up) // random splitting, Interdimensional
-																			// SpeedyMurmurs
+				// SpeedyMurmurs
 		};
 		//run 
 		Series.generate(net, m, 1);
-   }
+	}
 
-	
-	
-	
-	
+
 //	public static void genDataSets() {
 //		Transformation[] trans = new Transformation[] {new InitCapacities(200,BalDist.EXP), 
 //				new Transactions(5, TransDist.EXP, false, 10, false)};
@@ -330,11 +330,6 @@ public class PaymentTests {
 //		Metric[] m = new Metric[] {new RoutePayment(new ClosestNeighbor(hop),1, false)};
 //		Series.generate(net, m, 1); 
 //	}
-	
-	
-
-	
-	
 
 
 }

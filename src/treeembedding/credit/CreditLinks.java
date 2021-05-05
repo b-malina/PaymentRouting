@@ -172,6 +172,7 @@ public class CreditLinks extends GraphProperty {
 			double val_low = Double.parseDouble(parts[2]);
 			double val = Double.parseDouble(parts[3]);
 			double val_high = Double.parseDouble(parts[4]);
+			System.out.println("from=" + e.getSrc() + ", to=" + e.getDst() + ", val low=" + val_low + ", val=" + val + ", val high=" + val_high);
 			this.weights.put(e, new double[]{val_low,val, val_high});
 		}
 
