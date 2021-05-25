@@ -15,19 +15,16 @@ import paymentrouting.datasets.Transactions;
 import paymentrouting.datasets.Transactions.TransDist;
 import paymentrouting.route.attack.ColludingDropSplits;
 import paymentrouting.route.attack.NonColludingDropSplits;
-import paymentrouting.route.fee.AbsoluteDiffFee;
-import paymentrouting.route.fee.FeeComputation;
-import paymentrouting.route.fee.LightningFees;
-import paymentrouting.route.fee.RatioDiffFee;
-import paymentrouting.route.fee.RoutePaymentFees;
+import paymentrouting.route.fee.*;
 
 public class PaymentTests {
 
 	public static void main(String[] args) {
-		Config.overwrite("SERIES_GRAPH_WRITE", ""+true);
+		Config.overwrite("SERIES_GRAPH_WRITE", "" + true);
 		Config.overwrite("SKIP_EXISTING_DATA_FOLDERS", "" + false);//run even if results already exist
 //		runSimpleTestSynthetic();
-		runSimpleTest();
+//		runSimpleTest();
+		runSimpleFees();
 	}
 
 	/**
@@ -290,37 +287,39 @@ public class PaymentTests {
 //                                   }; 
 //		Series.generate(net, m, 1); 
 //	}
-//	
-//	
-//	
-//	public static void runSimpleFees() {
+
+	public static void runSimpleFees() {
+		Network net = new ReadableFile("DS", "DS", "data/test_data/simple_graph.txt", null);
 //		Network net = new ReadableFile("DS-Att", "DS-Att", "data/simple/simple2_graph.txt", null);
-//		DistanceFunction speedy = new SpeedyMurmurs(3);
-//		FeeComputation lightning = new LightningFees(1,1,false); 
-//		FeeComputation adf = new AbsoluteDiffFee(1,1, false);
-//		FeeComputation rdf = new RatioDiffFee(0.05,1, false);
-//		FeeComputation lightningZero = new LightningFees(1,1,true); 
-//		FeeComputation adfZero = new AbsoluteDiffFee(1,1, true);
-//		FeeComputation rdfZero = new RatioDiffFee(0.05,1, true);
-//		int trials = 1;
-//		boolean up = true; 
-//		int con = 3;
-//		int need = 1; 
-//		Metric[] m = new Metric[] {new RoutePaymentFees
-//				                   (new ClosestNeighbor(speedy),trials,up, lightning,con,need,false),
-//				                   new RoutePaymentFees
-//				                   (new ClosestNeighbor(speedy),trials,up, adf,con,need,false),
-//				                   new RoutePaymentFees
-//				                   (new ClosestNeighbor(speedy),trials,up, rdf,con,need,false),
-//				                   new RoutePaymentFees
-//				                   (new ClosestNeighbor(speedy),trials,up, lightningZero,con,need,false),
-//				                   new RoutePaymentFees
-//				                   (new ClosestNeighbor(speedy),trials,up, adfZero,con,need,false),
-//				                   new RoutePaymentFees
-//				                   (new ClosestNeighbor(speedy),trials,up, rdfZero,con,need,false)
-//				                   }; 
-//		Series.generate(net, m, 1); 
-//	}
+		DistanceFunction speedy = new SpeedyMurmurs(3);
+		FeeComputation lightning = new LightningFees(1, 1, false);
+		FeeComputation adf = new AbsoluteDiffFee(1, 1, false);
+		FeeComputation rdf = new RatioDiffFee(0.05, 1, false);
+		FeeComputation lightningZero = new LightningFees(1, 1, true);
+		FeeComputation adfZero = new AbsoluteDiffFee(1, 1, true);
+		FeeComputation rdfZero = new RatioDiffFee(0.05, 1, true);
+		FeeComputation basicFee = new BasicFee();
+		int trials = 1;
+		boolean up = true;
+		int con = 3;
+		int need = 1;
+		Metric[] m = new Metric[]{new RoutePaymentFees
+				(new ClosestNeighbor(speedy), trials, up, basicFee, con, need, false),
+				new RoutePaymentFees
+						(new ClosestNeighbor(speedy), trials, up, lightning, con, need, false),
+				new RoutePaymentFees
+						(new ClosestNeighbor(speedy), trials, up, adf, con, need, false),
+				new RoutePaymentFees
+						(new ClosestNeighbor(speedy), trials, up, rdf, con, need, false),
+				new RoutePaymentFees
+						(new ClosestNeighbor(speedy), trials, up, lightningZero, con, need, false),
+				new RoutePaymentFees
+						(new ClosestNeighbor(speedy), trials, up, adfZero, con, need, false),
+				new RoutePaymentFees
+						(new ClosestNeighbor(speedy), trials, up, rdfZero, con, need, false)
+		};
+		Series.generate(net, m, 1);
+	}
 //
 //	public static void testOnlyPossible() {
 //		Transformation[] trans = new Transformation[] {

@@ -1,13 +1,8 @@
 
 package paymentrouting.route;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
+import java.util.*;
 import java.util.Map.Entry;
-import java.util.Random;
-import java.util.Vector;
 
 import gtna.data.Single;
 import gtna.graph.Edge;
@@ -162,11 +157,15 @@ public class RoutePayment extends Metric {
 		int idx = 0;
 		for (Entry<Edge, double[]> e : edgeweights.getWeights()) // TEST -> balances on channels
 		{
+
+//			capacities = addElement(capacities, (long) edgeweights.getTotalCapacity(e.getKey().getSrc(), e.getKey().getDst()));
+//			potentials = addElement(capacities, (long) edgeweights.getPot(e.getKey().getSrc(), e.getKey().getDst()));
 			capacities[idx] = (long) edgeweights.getTotalCapacity(e.getKey().getSrc(), e.getKey().getDst());
 			potentials[idx++] = (long) edgeweights.getPot(e.getKey().getSrc(), e.getKey().getDst());
 
-			System.out.println("from " + e.getKey().getSrc() + ", to " + e.getKey().getDst());
-			System.out.println("capacity=" + capacities[idx - 1] + " potentials=" + potentials[idx - 1] + "\n");
+
+//			System.out.println("from " + e.getKey().getSrc() + ", to " + e.getKey().getDst());
+//			System.out.println("capacity=" + capacities[idx - 1] + " potentials=" + potentials[idx - 1] + "\n");
 
 		}
 		//iterate over transactions
@@ -337,15 +336,21 @@ public class RoutePayment extends Metric {
 			this.succTime[this.succTime.length - 1] = this.succTime[this.succTime.length - 1] / rest;
 		}
 		//TEST METRICS
-		this.capacityDistribution = new Distribution(capacities, capacities.length);
+		this.capacityDistribution = new Distribution(capacities, 1);
+		this.avCapacity = this.capacityDistribution.getAverageTest();
 
-		this.avCapacity = this.capacityDistribution.getAverage();
-		this.potentialDistribution = new Distribution(potentials, potentials.length);
-		this.avPotential = this.potentialDistribution.getAverage();
-		for(int l=0; l< this.potentialDistribution.getDistribution().length; l++)
-			System.out.println("-----> " +  this.potentialDistribution.getDistribution()[l]);
-		System.out.println("min " + this.potentialDistribution.getMin() +  " max=" + this.potentialDistribution.getMax()  + " avg= " +this.potentialDistribution.getAverage() + "\n");
-		//reset weights for further routing algorithms evaluated 
+		this.potentialDistribution = new Distribution(potentials, 1);
+		this.avPotential = this.potentialDistribution.getAverageTest();
+
+		for (int l = 0; l < this.potentialDistribution.getDistribution().length; l++)
+			System.out.println("potential-----> " + this.potentialDistribution.getDistribution()[l]);
+		System.out.println("min " + this.potentialDistribution.getMin() + " max=" + this.potentialDistribution.getMax() + " avg= " + this.avPotential + "\n");
+
+		for (int l = 0; l < this.capacityDistribution.getDistribution().length; l++)
+			System.out.println("capacity-----> " + this.capacityDistribution.getDistribution()[l]);
+		System.out.println("min " + this.capacityDistribution.getMin() + " max=" + this.capacityDistribution.getMax() + " avg= " + this.avCapacity + "\n");
+
+		//reset weights for further routing algorithms evaluated
 		if (this.update) {
 			this.weightUpdate(edgeweights, originalAll);
 		}
@@ -511,7 +516,21 @@ public class RoutePayment extends Metric {
 	 * @return
 	 */
 	public double getTotalCapacity(int s, int t) {
+//		return this.edgeweights.getPot(s, t);
 		return this.edgeweights.getTotalCapacity(s, t);
 	}
 
+	public long[] addElement(long[] arr, long value) {
+		for (int i = 0; i < arr.length; i++)
+			if (arr[i] == value) {
+				if (arr[i + 1] == 0)
+					arr[i + 1] = value;
+				else
+					arr[i + 1] = (arr[i + 1] + value) / 2;
+				arr[i] = 0;
+				i = arr.length;
+			}
+
+		return arr;
+	}
 }

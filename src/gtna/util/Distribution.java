@@ -24,7 +24,7 @@
  * Distribution.java
  * ---------------------------------------
  * (C) Copyright 2009-2011, by Benjamin Schiller (P2P, TU Darmstadt)
- * and Contributors 
+ * and Contributors
  *
  * Original Author: benni;
  * Contributors:    -;
@@ -37,7 +37,6 @@ package gtna.util;
 
 /**
  * @author benni
- * 
  */
 public class Distribution {
 	private double[] distribution;
@@ -51,6 +50,8 @@ public class Distribution {
 	private double average;
 
 	private double max;
+
+	private double averageTest;
 
 	public Distribution(long[] values, long sum) {
 		this(Distribution.computeDistributionLong(values, sum));
@@ -66,11 +67,13 @@ public class Distribution {
 		this.min = this.computeMin();
 		this.median = this.computeMedian();
 		this.average = this.computeAverage();
+		this.averageTest = this.computeAverageTest();
+
 		this.max = this.computeMax();
 	}
 
 	private static double[] computeDistributionLong(long[] values, long sum) {
-		if(sum == 0){
+		if (sum == 0) {
 			return new double[values.length];
 		}
 		double[] distribution = new double[values.length];
@@ -81,7 +84,7 @@ public class Distribution {
 	}
 
 	private static double[] computeDistributionInt(int[] values, int sum) {
-		if(sum == 0){
+		if (sum == 0) {
 			return new double[values.length];
 		}
 		double[] distribution = new double[values.length];
@@ -129,6 +132,14 @@ public class Distribution {
 		return avg;
 	}
 
+	private double computeAverageTest() {
+		double avg = 0;
+		for (int i = 0; i < this.distribution.length; i++) {
+			avg += this.distribution[i];
+		}
+		return avg / this.distribution.length;
+	}
+
 	/**
 	 * @return the distribution
 	 */
@@ -162,6 +173,14 @@ public class Distribution {
 	 */
 	public double getAverage() {
 		return this.average;
+	}
+
+	/**
+	 * TEST
+	 * @return the average
+	 */
+	public double getAverageTest() {
+		return this.averageTest;
 	}
 
 	/**
