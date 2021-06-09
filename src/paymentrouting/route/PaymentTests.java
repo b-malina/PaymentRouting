@@ -289,8 +289,10 @@ public class PaymentTests {
 //	}
 
 	public static void runSimpleFees() {
-		Network net = new ReadableFile("DS", "DS", "data/test_data/simple_graph.txt", null);
-//		Network net = new ReadableFile("DS-Att", "DS-Att", "data/simple/simple2_graph.txt", null);
+//		Network net = new ReadableFile("DS", "DS", "data/test_data/simple_graph.txt", null);
+		Network net = new ReadableFile("DS", "DS", "data/simple/simpleBackM_graph.txt", null);
+//		Network net = new ReadableFile("DS-Att", "DS-Att", "data/simple/simple3_graph.txt", null);
+
 		DistanceFunction speedy = new SpeedyMurmurs(3);
 		FeeComputation lightning = new LightningFees(1, 1, false);
 		FeeComputation adf = new AbsoluteDiffFee(1, 1, false);
@@ -298,15 +300,18 @@ public class PaymentTests {
 		FeeComputation lightningZero = new LightningFees(1, 1, true);
 		FeeComputation adfZero = new AbsoluteDiffFee(1, 1, true);
 		FeeComputation rdfZero = new RatioDiffFee(0.05, 1, true);
-		FeeComputation basicFee = new BasicFee();
+		FeeComputation basicFee = new BasicFee(0.1);
 		int trials = 1;
 		boolean up = true;
 		int con = 3;
 		int need = 1;
-		Metric[] m = new Metric[]{new RoutePaymentFees
-				(new ClosestNeighbor(speedy), trials, up, basicFee, con, need, false),
+		Metric[] m = new Metric[]{
+				new RoutePaymentFeesBasic
+						(new ClosestNeighbor(speedy), trials, up, basicFee, con),
 				new RoutePaymentFees
-						(new ClosestNeighbor(speedy), trials, up, lightning, con, need, false),
+						(new SplitIfNecessary(speedy), trials, up, basicFee, con, need, false),
+				new RoutePaymentFees
+						(new SplitClosest(speedy), trials, up, basicFee, con, need, false),
 				new RoutePaymentFees
 						(new ClosestNeighbor(speedy), trials, up, adf, con, need, false),
 				new RoutePaymentFees
@@ -319,6 +324,9 @@ public class PaymentTests {
 						(new ClosestNeighbor(speedy), trials, up, rdfZero, con, need, false)
 		};
 		Series.generate(net, m, 1);
+		for(int mt = 0; mt < m.length; mt++)
+		for (String s: m[mt].getDataPlotKeys())
+			System.out.println(s);
 	}
 //
 //	public static void testOnlyPossible() {

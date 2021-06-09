@@ -5,14 +5,14 @@ import treeembedding.credit.CreditLinks;
 
 public class LightningFees extends FeeComputation {
 	double base;
-	double rate; 
+	double rate;
 	boolean zero;
-	
+
 	public LightningFees(double b, double r, boolean zb) {
-		super("LIGHTNING_FEES_"+b+"_"+r+"_"+zb);
+		super("LIGHTNING_FEES_" + b + "_" + r + "_" + zb);
 		this.base = b;
 		this.rate = r;
-		this.zero = zb; 
+		this.zero = zb;
 	}
 
 	@Override
@@ -20,15 +20,15 @@ public class LightningFees extends FeeComputation {
 		if (this.zero) {
 			double b1 = edgeweights.getPot(s, t);
 			double b2 = edgeweights.getPot(t, s);
-			double capacity = b1+b2;
-			double refcapacity = capacity*0.5;
-			double oldDiff = Math.abs(b1-refcapacity); 
-			double newDiff = Math.abs(b1-val-refcapacity);
+			double capacity = b1 + b2;
+			double refcapacity = capacity * 0.5;
+			double oldDiff = Math.abs(b1 - refcapacity);
+			double newDiff = Math.abs(b1 - val - refcapacity);
 			if (newDiff < oldDiff) {
-				return 0; 
+				return 0;
 			}
 		}
-		return this.base+this.rate*val;
+		return this.base + this.rate * val;
 	}
 
 }

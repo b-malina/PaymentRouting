@@ -24,6 +24,8 @@ public class RatioDiffFee extends FeeComputation {
 		double oldDiff = Math.abs(b1-refcapacity); 
 		double newDiff = Math.abs(b1-val-refcapacity);
 		if (this.zero && newDiff < oldDiff) {
+//			System.out.println("RatioDiffFee val=" + val + " from="+s+" to=" +t + " fee=" +  0);
+
 			return 0; 
 		}
 		double neg = this.zone*capacity;
@@ -34,6 +36,8 @@ public class RatioDiffFee extends FeeComputation {
 		if (this.zero) {
 			ratio = ratio - 1; 
 		}
+		System.out.println("RatioDiffFee val=" + val + " from="+s+" to=" +t + " fee=" +  (ratio*this.defaultFee));
+
 		return ratio*this.defaultFee; 
 	}
 
