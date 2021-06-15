@@ -116,9 +116,7 @@ public class RoutePaymentFeesBasic extends RoutePayment {
 
 
 //				Vector<Path> outPaths = getOutgoingPaths(edgeweights, currentNode);
-
 //				int[] out = nodes[src].getOutgoingEdges();
-
 //				for (int id = 0; id < next.length; id++)
 //					System.out.println("FROM " + currentNode + " TO " + out[id] + " send " + next[id]);
 
@@ -144,6 +142,7 @@ public class RoutePaymentFeesBasic extends RoutePayment {
 						}
 
 						if (log) System.out.println("Routing at cur " + cur + " in dim " + pp.reality);
+
 						//getNextVals -> distribution of payment value over neighbors
 						double[] partVals = this.select.getNextsVals(g, cur, dst,
 								pre, excluded, this, pp.val, rand, pp.reality);
@@ -160,7 +159,13 @@ public class RoutePaymentFeesBasic extends RoutePayment {
 							for (int k = 0; k < partVals.length; k++) {
 								if (partVals[k] > 0) {
 									//compute fees
-									double partfee = this.fc.getFee(g, edgeweights, partVals[k], cur, out[k]);
+									System.out.println("AAAAAAADsaa " + pre + " " + cur + " " + out[k]);
+
+									// subtract fee gained by node from the path value
+									double partfee = 0;
+									 if(pre != -1)
+									 	partfee = this.fc.getFee(g, edgeweights, partVals[cur], pre, cur);
+//  									partfee = this.fc.getFee(g, edgeweights, partVals[k], cur, out[k]);
 //									if (h > 0) {
 //										fees[pp.reality] = fees[pp.reality] + partf;
 //									}
@@ -181,7 +186,7 @@ public class RoutePaymentFeesBasic extends RoutePayment {
 									//add links to sets
 									if (out[k] != dst) {
 										//add partf as previous link needs to sustain it
-										next.add(new PartialPath(out[k], partVals[k] + partfee,
+										next.add(new PartialPath(out[k], partVals[k] - partfee,
 												(Vector<Integer>) past.clone(), pp.reality));//add new intermediary to path
 									}
 //									linksPerDim.get(pp.reality).add(new int[]{cur, out[k]});

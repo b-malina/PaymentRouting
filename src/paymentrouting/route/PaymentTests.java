@@ -6,6 +6,8 @@ import gtna.networks.Network;
 import gtna.networks.model.BarabasiAlbert;
 import gtna.networks.model.ErdosRenyi;
 import gtna.networks.util.ReadableFile;
+import gtna.plot.Plotting;
+import gtna.plot.data.Data;
 import gtna.transformation.Transformation;
 import gtna.transformation.partition.LargestWeaklyConnectedComponent;
 import gtna.util.Config;
@@ -16,6 +18,8 @@ import paymentrouting.datasets.Transactions.TransDist;
 import paymentrouting.route.attack.ColludingDropSplits;
 import paymentrouting.route.attack.NonColludingDropSplits;
 import paymentrouting.route.fee.*;
+
+import static gtna.plot.Gnuplot.Style.linespoint;
 
 public class PaymentTests {
 
@@ -306,27 +310,13 @@ public class PaymentTests {
 		int con = 3;
 		int need = 1;
 		Metric[] m = new Metric[]{
-				new RoutePaymentFeesBasic
-						(new ClosestNeighbor(speedy), trials, up, basicFee, con),
-				new RoutePaymentFees
-						(new SplitIfNecessary(speedy), trials, up, basicFee, con, need, false),
-				new RoutePaymentFees
-						(new SplitClosest(speedy), trials, up, basicFee, con, need, false),
-				new RoutePaymentFees
-						(new ClosestNeighbor(speedy), trials, up, adf, con, need, false),
-				new RoutePaymentFees
-						(new ClosestNeighbor(speedy), trials, up, rdf, con, need, false),
-				new RoutePaymentFees
-						(new ClosestNeighbor(speedy), trials, up, lightningZero, con, need, false),
-				new RoutePaymentFees
-						(new ClosestNeighbor(speedy), trials, up, adfZero, con, need, false),
-				new RoutePaymentFees
-						(new ClosestNeighbor(speedy), trials, up, rdfZero, con, need, false)
+				new RoutePaymentFeesBasic(new SplitClosest(speedy), trials, up, basicFee),
+				new RoutePaymentFeesBasic(new SplitIfNecessary(speedy), trials, up, basicFee),
+				new RoutePaymentFeesBasic(new ClosestNeighbor(speedy), trials, up, basicFee),
+				new RoutePaymentFees(new SplitClosest(speedy), trials, up, basicFee, con, need, false),
+				new RoutePaymentFees(new ClosestNeighbor(speedy), trials, up, lightning, con, need, false)
 		};
-		Series.generate(net, m, 1);
-		for(int mt = 0; mt < m.length; mt++)
-		for (String s: m[mt].getDataPlotKeys())
-			System.out.println(s);
+		Series series = Series.generate(net, m, 1);
 	}
 //
 //	public static void testOnlyPossible() {

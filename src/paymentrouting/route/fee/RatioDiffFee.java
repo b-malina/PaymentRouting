@@ -36,7 +36,7 @@ public class RatioDiffFee extends FeeComputation {
 		if (this.zero) {
 			ratio = ratio - 1; 
 		}
-		System.out.println("RatioDiffFee val=" + val + " from="+s+" to=" +t + " fee=" +  (ratio*this.defaultFee));
+//		System.out.println("RatioDiffFee val=" + val + " from="+s+" to=" +t + " fee=" +  (ratio*this.defaultFee));
 
 		return ratio*this.defaultFee; 
 	}

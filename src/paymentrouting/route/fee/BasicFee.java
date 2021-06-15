@@ -22,7 +22,7 @@ public class BasicFee extends FeeComputation {
 	@Override
 	public double getFee(Graph g, CreditLinks edgeweights, double val, int s, int t) {
 		Transaction[] transactions = ((TransactionList) g.getProperty("TRANSACTION_LIST")).getTransactions();
-		return val/10E6;
+		return val/10E3+val/10E6;
 //		//		double capacity = edgeweights.getTotalCapacity(s, t);
 ////		double diff = val / capacity;
 ////		double rate = 10e-5 * diff;
