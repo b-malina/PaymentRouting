@@ -1,0 +1,10 @@
+# Graph Property Class
+gtna.graph.spanningTree.SpanningTree
+# Key
+SPANNINGTREE_2
+# Nodes
+5
+1;0;3
+3;1;2
+3;2;2
+4;3;1

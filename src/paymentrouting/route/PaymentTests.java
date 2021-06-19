@@ -36,8 +36,8 @@ public class PaymentTests {
 	 */
 	public static void runSimpleTest() {
 		//read test files with 5 nodes, 3 transactions
-//		Network net = new ReadableFile("DS", "DS", "data/test_data/small_graph.txt", null);
-		Network net = new ReadableFile("DS", "DS", "data/test_data/simple_graph.txt", null);
+		Network net = new ReadableFile("DS", "DS", "data/simple/simple2_graph.txt", null);
+//		Network net = new ReadableFile("DS", "DS", "data/test_data/simple_graph.txt", null);
 		//generate distance functions
 		DistanceFunction hop = new HopDistance();
 		DistanceFunction speedyMulti = new SpeedyMurmursMulti(2); //Interdimensional SpeedyMurmurs with two trees 
@@ -294,27 +294,32 @@ public class PaymentTests {
 
 	public static void runSimpleFees() {
 //		Network net = new ReadableFile("DS", "DS", "data/test_data/simple_graph.txt", null);
-		Network net = new ReadableFile("DS", "DS", "data/simple/simpleBackM_graph.txt", null);
-//		Network net = new ReadableFile("DS-Att", "DS-Att", "data/simple/simple3_graph.txt", null);
+//		Network net = new ReadableFile("DS", "DS", "data/simple/simpleBackM_graph.txt", null);
+		Network net = new ReadableFile("DS-Att", "DS-Att", "data/simple/simple2_graph.txt", null);
 
 		DistanceFunction speedy = new SpeedyMurmurs(3);
-		FeeComputation lightning = new LightningFees(1, 1, false);
-		FeeComputation adf = new AbsoluteDiffFee(1, 1, false);
+		FeeComputation lightning = new LightningFees(1, 10E-6, false);
+		FeeComputation adf = new AbsoluteDiffFee(20, 1/2, false);
 		FeeComputation rdf = new RatioDiffFee(0.05, 1, false);
-		FeeComputation lightningZero = new LightningFees(1, 1, true);
-		FeeComputation adfZero = new AbsoluteDiffFee(1, 1, true);
-		FeeComputation rdfZero = new RatioDiffFee(0.05, 1, true);
-		FeeComputation basicFee = new BasicFee(0.1);
-		int trials = 1;
-		boolean up = true;
+		FeeComputation basicFee = new BasicFee(1, 3*10E-2);
+
+		int trials = 5;
+		boolean up = false;
 		int con = 3;
 		int need = 1;
 		Metric[] m = new Metric[]{
 				new RoutePaymentFeesBasic(new SplitClosest(speedy), trials, up, basicFee),
 				new RoutePaymentFeesBasic(new SplitIfNecessary(speedy), trials, up, basicFee),
 				new RoutePaymentFeesBasic(new ClosestNeighbor(speedy), trials, up, basicFee),
-				new RoutePaymentFees(new SplitClosest(speedy), trials, up, basicFee, con, need, false),
-				new RoutePaymentFees(new ClosestNeighbor(speedy), trials, up, lightning, con, need, false)
+
+				new RoutePaymentFeesBasic(new SplitClosest(speedy), trials, up, lightning),
+				new RoutePaymentFeesBasic(new SplitIfNecessary(speedy), trials, up, lightning),
+				new RoutePaymentFeesBasic(new ClosestNeighbor(speedy), trials, up, lightning),
+
+				new RoutePaymentFeesBasic(new ClosestNeighbor(speedy), trials, up, adf),
+				new RoutePaymentFeesBasic(new SplitClosest(speedy), trials, up, rdf),
+//				new RoutePaymentFees(new ClosestNeighbor(speedy), trials, up, basicFee, con, need, up),
+//				new RoutePayment(new ClosestNeighbor(speedy), trials, up)
 		};
 		Series series = Series.generate(net, m, 1);
 	}

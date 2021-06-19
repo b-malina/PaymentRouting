@@ -304,8 +304,9 @@ public class Evaluation {
 		Config.overwrite("SERIES_GRAPH_WRITE", "" + true);
 		Config.overwrite("MAIN_DATA_FOLDER", "./data/lighting-nopadding/");
 		//network parametersRatioDiffFee
-		int[] vals = {1, 50, 200}; //various transaction values considered
-		int trs = 10000;
+		int[] vals = {200}; //various transaction values considered
+//		int trs = 10000;
+		int trs = 100;
 		String file = "lightning/lngraph_2020_03_01__04_00.graph";
 		//routing parameters
 		int[] trees = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
@@ -359,39 +360,36 @@ public class Evaluation {
 			speedyMulti[i] = new SpeedyMurmursMulti(trees[i]);
 		}
 		//instantiate routing
-		int trials = 1;
+		int trials = 2;
 		boolean up = false;
 //		Metric[] m = new Metric[3 + 3 * trees.length + 1];
-		Metric[] m = new Metric[12];
+		Metric[] m = new Metric[11];
 		int index = 0;
-		FeeComputation basicFee = new BasicFee(0.1);
-		FeeComputation lightning = new LightningFees(1, 1, false);
-		FeeComputation adf = new AbsoluteDiffFee(1, 1, false);
-		FeeComputation rdf = new RatioDiffFee(0.05, 1, false);
-		FeeComputation lightningZero = new LightningFees(1, 1, true);
-		FeeComputation adfZero = new AbsoluteDiffFee(1, 1, true);
-		FeeComputation rdfZero = new RatioDiffFee(0.05, 1, true);
+		FeeComputation lightning = new LightningFees(1, 10E-6, false);
+		FeeComputation adf = new AbsoluteDiffFee(20, 1 / 2, false);
+		FeeComputation rdf = new RatioDiffFee(0.5, 1, false);
+		FeeComputation basicFee = new BasicFee(1, 3 * 10E-2);
+//		FeeComputation lightningZero = new LightningFees(1, 1, true);
+//		FeeComputation adfZero = new AbsoluteDiffFee(1, 1, true);
+//		FeeComputation rdfZero = new RatioDiffFee(0.05, 1, true);
 		int con = 9, need = 1;
 		m[index++] = new RoutePaymentFeesBasic(new SplitClosest(hop), trials, up, basicFee);
-//		m[index++] = new RoutePaymentFeesBasic(new SplitIfNecessary(hop), trials, up, basicFee);
-		m[index++] = new RoutePaymentFeesBasic(new ClosestNeighbor(speedyMulti[3]), trials, up, basicFee);
-//		m[index++] = new RoutePaymentFeesBasic(new ClosestNeighbor(speedyMulti[3]), trials, up, rdf);
+		m[index++] = new RoutePaymentFeesBasic(new SplitIfNecessary(hop), trials, up, basicFee);
+		m[index++] = new RoutePaymentFeesBasic(new ClosestNeighbor(hop), trials, up, basicFee);
 
-		m[index++] = new RoutePaymentFees(new SplitClosest(speedyMulti[4]), trials, up, adf, con, need, false);
-		m[index++] = new RoutePaymentFees(new SplitClosest(speedyMulti[5]), trials, up, basicFee, con, need, false);
-		m[index++] = new RoutePaymentFees(new SplitClosest(speedyMulti[3]), trials, up, lightning, con, need, false);
-//		m[index++] = new RoutePaymentFees(new SplitClosest(speedyMulti[3]), trials, up, lightningZero, con, need, false);
+		m[index++] = new RoutePaymentFeesBasic(new SplitClosest(hop), trials, up, lightning);
+		m[index++] = new RoutePaymentFeesBasic(new SplitIfNecessary(hop), trials, up, lightning);
+		m[index++] = new RoutePaymentFeesBasic(new ClosestNeighbor(hop), trials, up, lightning);
 
-//		m[index++] = new RoutePaymentFees(new ClosestNeighbor(speedyMulti[8]), trials, up, adf, con, need, false);
-		m[index++] = new RoutePaymentFees(new ClosestNeighbor(speedyMulti[5]), trials, up, lightning, con, need, false);
-		m[index++] = new RoutePaymentFees(new ClosestNeighbor(speedyMulti[3]), trials, up, rdf, con, need, false);
-		m[index++] = new RoutePaymentFees(new ClosestNeighbor(speedyMulti[3]), trials, up, basicFee, con, need, false);
 
-		m[index++] = new RoutePaymentFees(new SplitIfNecessary(speedyMulti[1]), trials, up, adf, con, need, false);
-		m[index++] = new RoutePaymentFees(new SplitIfNecessary(speedyMulti[1]), trials, up, lightning, con, need, false);
-//		m[index++] = new RoutePaymentFees(new SplitIfNecessary(speedyMulti[1]), trials, up, rdfZero, con, need, false);
-		m[index++] = new RoutePaymentFees(new SplitIfNecessary(speedyMulti[2]), trials, up, rdf, con, need, false);
-		//		m[index++] = new RoutePaymentFeesBasic(new SplitClosest(hop), trials, up, basicFee);
+//		m[index++] = new RoutePaymentFeesBasic(new SplitClosest(hop), trials, up, adf);
+		m[index++] = new RoutePaymentFeesBasic(new SplitIfNecessary(hop), trials, up, adf);
+		m[index++] = new RoutePaymentFeesBasic(new ClosestNeighbor(speedyMulti[3]), trials, up, adf);
+
+		m[index++] = new RoutePaymentFeesBasic(new SplitClosest(hop), trials, up, rdf);
+//		m[index++] = new RoutePaymentFeesBasic(new SplitIfNecessary(hop), trials, up, rdf);
+		m[index++] = new RoutePaymentFeesBasic(new ClosestNeighbor(speedyMulti[3]), trials, up, rdf);
+
 //		m[index++] = new RoutePayment(new SplitIfNecessary(hop), trials, up);
 //		m[index++] = new RoutePayment(new SplitClosest(hop), trials, up);
 //		for (int i = 0; i < trees.length; i++) {
@@ -431,36 +429,34 @@ public class Evaluation {
 		}
 		int trials = 1;
 		boolean up = false;
-		Metric[] m = new Metric[12];
+		Metric[] m = new Metric[11];
 		int index = 0;
-		FeeComputation basicFee = new BasicFee(0.1);
-		FeeComputation lightning = new LightningFees(1, 1, false);
-		FeeComputation adf = new AbsoluteDiffFee(1, 1, false);
+		FeeComputation lightning = new LightningFees(1, 10E-6, false);
+		FeeComputation adf = new AbsoluteDiffFee(20, 1 / 2, false);
 		FeeComputation rdf = new RatioDiffFee(0.05, 1, false);
-		FeeComputation lightningZero = new LightningFees(1, 1, true);
-		FeeComputation adfZero = new AbsoluteDiffFee(1, 1, true);
-		FeeComputation rdfZero = new RatioDiffFee(0.05, 1, true);
+		FeeComputation basicFee = new BasicFee(1, 3*10E-2);
+//		FeeComputation lightningZero = new LightningFees(1, 1, true);
+//		FeeComputation adfZero = new AbsoluteDiffFee(1, 1, true);
+//		FeeComputation rdfZero = new RatioDiffFee(0.05, 1, true);
 		int con = 4, need = 1;
 		m[index++] = new RoutePaymentFeesBasic(new SplitClosest(hop), trials, up, basicFee);
-//		m[index++] = new RoutePaymentFeesBasic(new SplitIfNecessary(hop), trials, up, basicFee);
-		m[index++] = new RoutePaymentFeesBasic(new ClosestNeighbor(speedyMulti[3]), trials, up, basicFee);
-//		m[index++] = new RoutePaymentFeesBasic(new ClosestNeighbor(speedyMulti[3]), trials, up, rdf);
+		m[index++] = new RoutePaymentFeesBasic(new SplitIfNecessary(hop), trials, up, basicFee);
+		m[index++] = new RoutePaymentFeesBasic(new ClosestNeighbor(hop), trials, up, basicFee);
 
-		m[index++] = new RoutePaymentFees(new SplitClosest(speedyMulti[4]), trials, up, adf, con, need, false);
-		m[index++] = new RoutePaymentFees(new SplitClosest(speedyMulti[5]), trials, up, basicFee, con, need, false);
-		m[index++] = new RoutePaymentFees(new SplitClosest(speedyMulti[3]), trials, up, lightning, con, need, false);
-//		m[index++] = new RoutePaymentFees(new SplitClosest(speedyMulti[3]), trials, up, lightningZero, con, need, false);
+		m[index++] = new RoutePaymentFeesBasic(new SplitClosest(hop), trials, up, lightning);
+		m[index++] = new RoutePaymentFeesBasic(new SplitIfNecessary(hop), trials, up, lightning);
+		m[index++] = new RoutePaymentFeesBasic(new ClosestNeighbor(hop), trials, up, lightning);
 
-		m[index++] = new RoutePaymentFees(new ClosestNeighbor(speedyMulti[8]), trials, up, adf, con, need, false);
-		m[index++] = new RoutePaymentFees(new ClosestNeighbor(speedyMulti[5]), trials, up, lightning, con, need, false);
-		m[index++] = new RoutePaymentFees(new ClosestNeighbor(speedyMulti[3]), trials, up, rdf, con, need, false);
-//		m[index++] = new RoutePaymentFees(new ClosestNeighbor(speedyMulti[3]), trials, up, basicFee, con, need, false);
 
-		m[index++] = new RoutePaymentFees(new SplitIfNecessary(speedyMulti[1]), trials, up, adf, con, need, false);
-		m[index++] = new RoutePaymentFees(new SplitIfNecessary(speedyMulti[1]), trials, up, lightning, con, need, false);
-//		m[index++] = new RoutePaymentFees(new SplitIfNecessary(speedyMulti[1]), trials, up, rdfZero, con, need, false);
-		m[index++] = new RoutePaymentFees(new SplitIfNecessary(speedyMulti[2]), trials, up, rdf, con, need, false);
-//		m[index++] =  new RoutePayment(new RandomSplit(hop),trials, up);
+//		m[index++] = new RoutePaymentFeesBasic(new SplitClosest(hop), trials, up, adf);
+		m[index++] = new RoutePaymentFeesBasic(new SplitIfNecessary(hop), trials, up, adf);
+		m[index++] = new RoutePaymentFeesBasic(new ClosestNeighbor(speedyMulti[3]), trials, up, adf);
+
+		m[index++] = new RoutePaymentFeesBasic(new SplitClosest(hop), trials, up, rdf);
+//		m[index++] = new RoutePaymentFeesBasic(new SplitIfNecessary(hop), trials, up, rdf);
+		m[index++] = new RoutePaymentFeesBasic(new ClosestNeighbor(speedyMulti[3]), trials, up, rdf);
+
+
 //		for (int i = 0; i < trees.length; i++) {
 ////			m[index++] =  new RoutePayment(new ClosestNeighbor(speedyMulti[i]),trials, up);
 //			m[index++] = new RoutePayment(new SplitIfNecessary(speedyMulti[i]), trials, up);

@@ -1,5 +1,6 @@
 package paymentrouting.route;
 
+import java.util.ArrayList;
 import java.util.Vector;
 
 /**
@@ -15,12 +16,14 @@ public class PartialPath {
 		public double val;
 		public Vector<Integer> pre;
 		public int reality;
-		
-		public PartialPath(int n, double val2, Vector<Integer> p, int r) {
+		public Vector<Double> fees;
+
+	public PartialPath(int n, double val2, Vector<Integer> p, int r, Vector<Double> f) {
 			this.node = n;
 			this.val = val2;
 			this.pre = p;
 			this.reality = r;
+			this.fees = f;
 		}
 	
 }

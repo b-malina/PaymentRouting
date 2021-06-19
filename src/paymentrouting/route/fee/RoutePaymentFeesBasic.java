@@ -4,22 +4,22 @@ import gtna.data.Single;
 import gtna.graph.Edge;
 import gtna.graph.Graph;
 import gtna.graph.Node;
-import gtna.graph.weights.EdgeWeights;
 import gtna.metrics.Metric;
 import gtna.networks.Network;
 import gtna.util.Distribution;
-import gtna.util.parameter.BooleanParameter;
-import gtna.util.parameter.IntParameter;
 import gtna.util.parameter.Parameter;
 import gtna.util.parameter.StringParameter;
 import paymentrouting.datasets.TransactionList;
 import paymentrouting.route.PartialPath;
-import paymentrouting.route.Path;
 import paymentrouting.route.PathSelection;
 import paymentrouting.route.RoutePayment;
 import treeembedding.credit.CreditLinks;
 import treeembedding.credit.Transaction;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.*;
 
 public class RoutePaymentFeesBasic extends RoutePayment {
@@ -35,19 +35,13 @@ public class RoutePaymentFeesBasic extends RoutePayment {
 	public RoutePaymentFeesBasic(PathSelection ps, int trials, boolean up,
 	                             FeeComputation fee) {
 		super(ps, trials, up,
-				new Parameter[]{new StringParameter("FEE RP", fee.getName()),
-//						new IntParameter("NEEDED", p),
-//						new BooleanParameter("ACTIVE", a)
-				});
+				new Parameter[]{new StringParameter("FEE RP", fee.getName())});
 		this.fc = fee;
-
 	}
 
 	public RoutePaymentFeesBasic(PathSelection ps, int trials, boolean up,
 	                             FeeComputation fee, int epoch) {
-		super(ps, trials, up, epoch,
-				new Parameter[]{new StringParameter("FEE RP", fee.getName()),
-				});
+		super(ps, trials, up, epoch, new Parameter[]{new StringParameter("FEE RP", fee.getName()),});
 		this.fc = fee;
 	}
 
@@ -73,6 +67,7 @@ public class RoutePaymentFeesBasic extends RoutePayment {
 		long[] mes = new long[2];
 		long[] mesSucc = new long[2];
 		int count = this.transactions.length;
+
 		// fee paid by each source; totalFees[index] = fee paid by node initiating indexth tx
 		Vector<Double> totalFees = new Vector<Double>();
 		int len = this.transactions.length / this.tInterval;
@@ -83,42 +78,70 @@ public class RoutePaymentFeesBasic extends RoutePayment {
 			this.succTime = new double[len + 1];
 		}
 		int slot = 0;
-
+		File newFile = new File("results_" + this.fc.getName() + " " + this.select.getName() + ".txt");
+		File evalFile = new File("eval;" + this.fc.getName() + ";" + this.select.getName() + ".txt");
+		PrintWriter writer = null;
+		PrintWriter eval = null;
+		try {
+			writer = new PrintWriter(newFile, "UTF-8");
+			eval = new PrintWriter(evalFile, "UTF-8");
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
 		//iterate over transactions
+		writer.println("FEE_MODEL: " + fc.getName());
+		eval.println("FEE_MODEL: " + fc.getName());
+		eval.println("SPLITTING_PROTOCOL: " + this.select.getName());
 		for (int i = 0; i < this.transactions.length; i++) {
 			Transaction tr = this.transactions[i];
+			writer.println("\n\n\n NEW TX------------");
 
 			int src = tr.getSrc();
 			int dst = tr.getDst();
 			double val = tr.getVal();
 
-			if (log) System.out.println("Src-dst " + src + "," + dst + " " + val);
+			writer.println("TX_VAL: " + val);
+			writer.println("SRC: " + src);
+			writer.println("DST: " + dst);
+
+			eval.println("\nTX_VAL: " + val);
+
+			if (log) System.out.println("\n\n\nSrc-dst " + src + "," + dst + " " + val);
 			boolean s = true; //successful
 			int h = 0; //hops
 			int x = 0; //messages
 
-			// set fee value
-			// COMPUTE USING FEE COMPUTATION FC
-			double fee = fc.getFee(g, edgeweights, val, src, dst);
-			totalFees.add(fee);
+			// set fee value (at src)
+			int[] ps = new int[1];
+			ps[0] = src;
+			double fee = fc.getFee(g, edgeweights, val, ps);
+			writer.println("FEE_AT_SRC: " + fee);
 
-			//payment amount to be routed through current
 			//attempt at most trials times
 			for (int t = 0; t < this.trials; t++) {
+				String logTxt = "";
+				// payment obtained by dst
+				double finalVal = 0;
+				writer.println("TRIAL: " + t);
+				eval.println("TRIAL: " + t);
 				//set initial set of current nodes and partial payment values to (src, totalVal)
 				Vector<PartialPath> pps = new Vector<PartialPath>();
-				pps.add(new PartialPath(src, val + fee, new Vector<Integer>(), 0));
+//				pps.add(new PartialPath(src, val, new Vector<Integer>(), 0, fee));
+				//some routing algorithm split over multiple dimensions in the beginning (!= splitting during routing)
+				double[] splitVal = this.splitRealities(val, g.getNodes()[src].getOutDegree(), rand);
 
-//				System.out.println("tx value=" + val + ", fee=" + fee);
+				// FEE is 0; each node adds its obtained fee to the fee field
+				for (int a = 0; a < g.getNodes()[src].getOutDegree(); a++) {
+//					double tempFee = fc.getFee(g, edgeweights, splitVal[a], src, a);
+					pps.add(new PartialPath(src, splitVal[a], new Vector<Integer>(), 0, new Vector<>()));
+				}
+
+				//System.out.println("tx value=" + val + ", fee=" + fee);
 				boolean[] excluded = new boolean[nodes.length];
 				this.minusPots = new HashMap<Edge, double[]>();
 				this.originalWeight = new HashMap<Edge, Double>(); //updated credit links
-
-
-//				Vector<Path> outPaths = getOutgoingPaths(edgeweights, currentNode);
-//				int[] out = nodes[src].getOutgoingEdges();
-//				for (int id = 0; id < next.length; id++)
-//					System.out.println("FROM " + currentNode + " TO " + out[id] + " send " + next[id]);
 
 				//while current set of nodes is not empty
 				while (!pps.isEmpty()) {
@@ -131,7 +154,6 @@ public class RoutePaymentFeesBasic extends RoutePayment {
 						PartialPath pp = pps.get(j);
 						int cur = pp.node;
 						int pre = -1;
-
 						// take previous and exclude prev nodes
 						Vector<Integer> past = pp.pre;
 						if (past.size() > 0) {
@@ -151,28 +173,23 @@ public class RoutePaymentFeesBasic extends RoutePayment {
 						for (int l = 0; l < past.size(); l++) {
 							excluded[past.get(l)] = false;
 						}
-//
-//						//add neighbors that are not the dest to new set of current nodes
+						//add neighbors that are not the dest to new set of current nodes
 						if (partVals != null) {
 							past.add(cur);
 							int[] out = nodes[cur].getOutgoingEdges();
 							for (int k = 0; k < partVals.length; k++) {
+								// compute fee earned by current intermediary
+								double tempFee = 0;
 								if (partVals[k] > 0) {
-									//compute fees
-									System.out.println("AAAAAAADsaa " + pre + " " + cur + " " + out[k]);
-
-									// subtract fee gained by node from the path value
-									double partfee = 0;
-									 if(pre != -1)
-									 	partfee = this.fc.getFee(g, edgeweights, partVals[cur], pre, cur);
-//  									partfee = this.fc.getFee(g, edgeweights, partVals[k], cur, out[k]);
-//									if (h > 0) {
-//										fees[pp.reality] = fees[pp.reality] + partf;
-//									}
-//									//increase message count
+									// if current node is not the src
+									if (pre != -1) {
+										tempFee = fc.getFee(g, edgeweights, pp.val, cur, out[k]);
+										pp.fees.add(tempFee);
+									}
+									//increase message count
 									x++;
-//
-//									//update vals
+
+									//update vals
 									Edge e = edgeweights.makeEdge(cur, out[k]);
 									double w = edgeweights.getWeight(e);
 									if (!originalWeight.containsKey(e)) {
@@ -183,27 +200,55 @@ public class RoutePaymentFeesBasic extends RoutePayment {
 									}
 									edgeweights.setWeight(cur, out[k], partVals[k]);//set to new balance
 
+
 									//add links to sets
 									if (out[k] != dst) {
 										//add partf as previous link needs to sustain it
-										next.add(new PartialPath(out[k], partVals[k] - partfee,
-												(Vector<Integer>) past.clone(), pp.reality));//add new intermediary to path
+										if (log)
+											System.out.println("LOG out != dst  fees=" + pp.fees + " tempfee= " + tempFee + " ");
+
+										next.add(new PartialPath(out[k], partVals[k],
+												(Vector<Integer>) past.clone(), pp.reality, (Vector<Double>) (pp.fees).clone()));//add new intermediary to path
 									}
-//									linksPerDim.get(pp.reality).add(new int[]{cur, out[k]});
-//									double[] mins = this.minusPots.get(e);
-//									if (mins == null) {
-//										mins = new double[]{0, 0};
-//										this.minusPots.put(e, mins);
-//									}
-//									if (cur < out[k]) {
-//										mins[0] = mins[0] + partVals[k];
-//									} else {
-//										mins[1] = mins[1] + partVals[k];
-//									}
-//
+
 									if (log) {
-										System.out.println("add link (" + cur + "," + out[k] + ") with val " + partVals[k]);
+										System.out.println("add link (" + cur + "," + out[k] + ") with val " + partVals[k] + " --- rfee " + pp.fees);
 									}
+									if (out[k] == dst) {
+										writer.println("collected_fees: " + pp.fees);
+
+//										System.out.println("LOG out=dst node  " + pp.node + " pre= " + pp.pre + " tx amount=" + pp.val + " FEES OUT=dst" + pp.fees);
+										if (log) System.out.println("NOTE out = dst" + partVals[k]);
+										finalVal += partVals[k];
+
+										totalFees = pp.fees;
+										double sum = 0;
+										for (double f : totalFees)
+											sum += f;
+
+//										System.out.println("FINAL FEE= " + sum + " of subfees " + totalFees.size()  +" " +  pp.fees.size()+ " FOR TX=" + val + "\nDONE\n");
+										writer.println("FEE: " + tempFee + "  collected_fees: " + pp.fees + "\n, pre=" + pre + ", cur=" + cur + " to " + out[k] + ", amount=" + pp.val + " past= " + pp.pre);
+
+										writer.println("FINAL FEE= " + sum + " of subfees " + totalFees.size() + " FOR TX=" + val + "\nDONE\n");
+										if (this.fc.getName().contains("BASIC")) {
+											if (fee < sum) {
+												s = false;
+												writer.println("CANNOT PAY fee of " + sum + " with initial fee of " + fee);
+												logTxt = "FEE TOO LOW";
+											} else {
+												s = true;
+												writer.println("CAN PAY fee of " + sum + " with initial fee of " + fee);
+											}
+										}
+										eval.print("FEES: ");
+										for (double ppfee : pp.fees)
+											eval.print(ppfee + " ");
+										eval.println();
+										eval.println("OFFERED_FEE: " + fee);
+										eval.println("FINAL_FEE: " + sum);
+										eval.println("NODES: " + (pp.pre.size() + 1));
+									}
+//									else if (cur == dst) System.out.println("NOTE cur = dst");
 								}
 							}
 						} else {
@@ -212,65 +257,43 @@ public class RoutePaymentFeesBasic extends RoutePayment {
 								System.out.println("fail");
 								//throw new IllegalArgumentException();
 							}
-//							s = false;
+							s = false;
+							logTxt = "CANNOT SPLIT";
 //							fees[pp.reality] = Double.MAX_VALUE;
 						}
 					}
+
 					pps = this.merge(next); //merge paths: if the same payment arrived at a node via two paths: merge into one
 					h++; //increase hops
-
+					if (fc instanceof BasicFee) {
+						BasicFee bf = (BasicFee) fc;
+						bf.hops = h;
+					}
 				}
-				//select paths to choose
-//				int cF = 0;
-//				for (int a = 0; a < fees.length; a++) {
-//					if (log) System.out.println(fees[a]);
-//					if (fees[a] != Double.MAX_VALUE) {
-//						cF++;
-//					}
-//				}
-//				boolean[] chosen = new boolean[fees.length];
-//				if (cF < this.needed) {
-//					//not enough paths -> fail
-//					s = false;
-//				} else {
-//					//find needed minimal paths
-//					double total = 0;
-//					for (int j = 0; j < this.needed; j++) {
-//						double min = Double.MAX_VALUE;
-//						Vector<Integer> mins = new Vector<Integer>();
-//						for (int a = 0; a < fees.length; a++) {
-//							if (!chosen[a] && fees[a] != Double.MAX_VALUE) {
-//								if (fees[a] < min) {
-//									mins = new Vector<Integer>();
-//									min = fees[a];
-//								}
-//								if (fees[a] <= min) {
-//									mins.add(a);
-//								}
-//							}
-//						}
-//						int sel = mins.get(rand.nextInt(mins.size()));
-//						chosen[sel] = true;
-//						total = total + min;
-//					}
-//					totalFees.add(total);
-//				}
-//
-				if (!s) {
+
+				if (!s || val < finalVal) {
+					if (val < finalVal)
+						logTxt = "LOW PAYMENT: " + (val - finalVal);
 					h--;
 					//payments were not made -> return to original weights
 					this.weightUpdate(edgeweights, originalWeight);
 					if (log) {
 						System.out.println("Failure");
 					}
+					writer.println("FAILURE");
 				} else {
+//					System.out.println("SUCC     v=" + val + "        fival=" + finalVal + "       diff=" + (val - finalVal));
+
+//					if (val < finalVal) {
+//						eval.println("LOW_PAYMENT;DIFF: " + (val - finalVal));
+//						eval.println("RECEIVED_BY_DST: " + finalVal + " INIT=" + val + " ------- " + (val - finalVal));
+//					}
 					if (!this.update) {
 						//return credit links to original state
-						this.weightUpdate(edgeweights,originalWeight);
+						this.weightUpdate(edgeweights, originalWeight);
 					}
 
 					//update stats for this transaction
-
 					pathSucc = inc(pathSucc, h);
 					mesSucc = inc(mesSucc, x);
 					this.succTime[slot]++;
@@ -283,6 +306,7 @@ public class RoutePaymentFeesBasic extends RoutePayment {
 					if (log) {
 						System.out.println("Success");
 					}
+					writer.println("SUCCESS");
 				}
 
 				path = inc(path, h);
@@ -290,6 +314,13 @@ public class RoutePaymentFeesBasic extends RoutePayment {
 				if ((i + 1) % this.tInterval == 0) {
 					this.succTime[slot] = this.succTime[slot] / this.tInterval;
 					slot++;
+				}
+				if (s) {
+					eval.println("FAILURE: " + "False");
+					eval.println("SUCCESS: True");
+				} else {
+					eval.println("FAILURE: " + logTxt);
+					eval.println("SUCCESS: False");
 				}
 
 			}
@@ -299,6 +330,14 @@ public class RoutePaymentFeesBasic extends RoutePayment {
 				this.select.initRoutingInfo(g, rand);
 			}
 		}
+//		writer.println("The first line");
+
+
+//		System.out.println("\nPAY FEES " + totalFees.size());
+//		for (double v : totalFees) {
+//			System.out.print(v + " ");
+//		}
+//		System.out.println("DONE\n\n");
 
 		//compute final stats
 		this.hopDistribution = new Distribution(path, count);
@@ -334,11 +373,20 @@ public class RoutePaymentFeesBasic extends RoutePayment {
 		if (rest > 0) {
 			this.succTime[this.succTime.length - 1] = this.succTime[this.succTime.length - 1] / rest;
 		}
+		eval.println("FEE_Q1: " + fee_q1);
+		eval.println("FEE_Q3: " + fee_q2);
+		eval.println("FEE_AV: " + fee_av);
+		eval.println("FEE_MED: " + fee_med);
+		eval.println("SUCCESS_FRAC: " + success);
+		eval.println("HOPS_AV: " + avHops);
+		eval.println("HOPS_SUCC: " + avHopsSucc);
 
 		//reset weights for further metrics using them
 		if (this.update) {
 			this.weightUpdate(edgeweights, originalAll);
 		}
+		writer.close();
+		eval.close();
 	}
 
 	@Override
@@ -376,28 +424,6 @@ public class RoutePaymentFeesBasic extends RoutePayment {
 			edgeweights.setWeight(e, curWeight);
 		}
 		return val - subtract;
-	}
-
-	public Vector<Path> getOutgoingPaths(CreditLinks edgeWeights, int src) {
-		Vector<Path> outPaths = new Vector<Path>();
-		for (Map.Entry<Edge, double[]> entry : edgeweights.getWeights()) {
-			Edge edge = entry.getKey();
-			// if src of edge = src, copy channel balance from src to outgoing node
-			if (edge.getSrc() == src) {
-				double[] value = entry.getValue();
-				double balance = Math.abs(value[0]);
-				outPaths.add(new Path(src, edge.getDst(), balance));
-			}
-			// if dest of edge = src, copy channel balance from src to other node
-			else if (edge.getDst() == src) {
-				double[] value = entry.getValue();
-				double balance = Math.abs(value[2]);
-				outPaths.add(new Path(src, edge.getSrc(), balance));
-			}
-			// System.out.println("\n");
-			// System.out.println("from " + edge.getSrc() + " to " + edge.getDst());
-		}
-		return outPaths;
 	}
 
 }

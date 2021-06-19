@@ -5,17 +5,18 @@ import treeembedding.credit.CreditLinks;
 
 public abstract class FeeComputation {
 	private String name;
-	
+
 	public FeeComputation(String name) {
-		this.name = name; 
+		this.name = name;
 	}
 
 	public String getName() {
 		return name;
 	}
-	
+
 	/**
 	 * get fees of path for value val
+	 *
 	 * @param g
 	 * @param edgeweights
 	 * @param val
@@ -24,14 +25,15 @@ public abstract class FeeComputation {
 	 */
 	public double getFee(Graph g, CreditLinks edgeweights, double val, int[] path) {
 		double sum = 0;
-		for (int i = 0; i < path.length-1; i++) {
-			sum = sum + this.getFee(g, edgeweights, val, path[i], path[i+1]);
+		for (int i = 0; i < path.length - 1; i++) {
+			sum = sum + this.getFee(g, edgeweights, val, path[i], path[i + 1]);
 		}
-		return sum; 
+		return sum;
 	}
-	
+
 	/**
-	 * get fee for link (s,t) for value val 
+	 * get fee for link (s,t) for value val
+	 *
 	 * @param g
 	 * @param edgeweights
 	 * @param val
