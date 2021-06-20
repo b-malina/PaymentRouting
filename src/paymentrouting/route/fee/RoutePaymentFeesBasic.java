@@ -78,8 +78,12 @@ public class RoutePaymentFeesBasic extends RoutePayment {
 			this.succTime = new double[len + 1];
 		}
 		int slot = 0;
+		double tx_avg = 0;
+		for (Transaction t : this.transactions)
+			tx_avg += t.getVal();
+		tx_avg /= this.transactions.length;
 		File newFile = new File("results_" + this.fc.getName() + " " + this.select.getName() + ".txt");
-		File evalFile = new File("eval;" + this.fc.getName() + ";" + this.select.getName() + ".txt");
+		File evalFile = new File("eval;" + this.fc.getName() + ";" + this.select.getName() + ";" + tx_avg + ".txt");
 		PrintWriter writer = null;
 		PrintWriter eval = null;
 		try {
@@ -94,6 +98,7 @@ public class RoutePaymentFeesBasic extends RoutePayment {
 		writer.println("FEE_MODEL: " + fc.getName());
 		eval.println("FEE_MODEL: " + fc.getName());
 		eval.println("SPLITTING_PROTOCOL: " + this.select.getName());
+
 		for (int i = 0; i < this.transactions.length; i++) {
 			Transaction tr = this.transactions[i];
 			writer.println("\n\n\n NEW TX------------");
@@ -101,7 +106,6 @@ public class RoutePaymentFeesBasic extends RoutePayment {
 			int src = tr.getSrc();
 			int dst = tr.getDst();
 			double val = tr.getVal();
-
 			writer.println("TX_VAL: " + val);
 			writer.println("SRC: " + src);
 			writer.println("DST: " + dst);
@@ -373,6 +377,7 @@ public class RoutePaymentFeesBasic extends RoutePayment {
 		if (rest > 0) {
 			this.succTime[this.succTime.length - 1] = this.succTime[this.succTime.length - 1] / rest;
 		}
+
 		eval.println("FEE_Q1: " + fee_q1);
 		eval.println("FEE_Q3: " + fee_q2);
 		eval.println("FEE_AV: " + fee_av);
@@ -380,6 +385,7 @@ public class RoutePaymentFeesBasic extends RoutePayment {
 		eval.println("SUCCESS_FRAC: " + success);
 		eval.println("HOPS_AV: " + avHops);
 		eval.println("HOPS_SUCC: " + avHopsSucc);
+
 
 		//reset weights for further metrics using them
 		if (this.update) {

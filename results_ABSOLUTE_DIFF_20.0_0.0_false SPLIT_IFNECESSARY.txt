@@ -3,121 +3,51 @@ FEE_MODEL: ABSOLUTE_DIFF_20.0_0.0_false
 
 
  NEW TX------------
-TX_VAL: 70.57057178179782
-SRC: 778
-DST: 2326
+TX_VAL: 165.90139839749625
+SRC: 4764
+DST: 2624
+FEE_AT_SRC: 0.0
+TRIAL: 0
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 214.6719197841153
+SRC: 5307
+DST: 4595
+FEE_AT_SRC: 0.0
+TRIAL: 0
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 6.5740361507040985
+SRC: 5840
+DST: 5483
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0]
+, pre=2716, cur=4152 to 5483, amount=6.5740361507040985 past= [5840, 2716, 4152]
+FINAL FEE= 0.0 of subfees 2 FOR TX=6.5740361507040985
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 56.836803959275905
+SRC: 1931
+DST: 4825
 FEE_AT_SRC: 0.0
 TRIAL: 0
 collected_fees: [0.0, 0.0, 0.0]
 FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
-, pre=630, cur=170 to 2326, amount=70.57057178179782 past= [778, 718, 630, 170]
-FINAL FEE= 0.0 of subfees 3 FOR TX=70.57057178179782
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 3.6040898044058065
-SRC: 285
-DST: 1944
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
-, pre=2701, cur=1943 to 1944, amount=1.9725572036106946 past= [285, 466, 2701, 1943]
-FINAL FEE= 0.0 of subfees 3 FOR TX=3.6040898044058065
-DONE
-
-collected_fees: [0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
-, pre=10, cur=1229 to 1944, amount=1.6315326007951119 past= [285, 202, 10, 1229]
-FINAL FEE= 0.0 of subfees 3 FOR TX=3.6040898044058065
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 26.269726140380843
-SRC: 5428
-DST: 4020
-FEE_AT_SRC: 0.0
-TRIAL: 0
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 17.009652845285984
-SRC: 646
-DST: 396
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
-, pre=209, cur=4 to 396, amount=17.009652845285984 past= [646, 630, 209, 4]
-FINAL FEE= 0.0 of subfees 3 FOR TX=17.009652845285984
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 46.12639761860937
-SRC: 3847
-DST: 4551
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0]
-, pre=2598, cur=1229 to 4551, amount=46.12639761860936 past= [3847, 1966, 3645, 3050, 2598, 1229]
-FINAL FEE= 0.0 of subfees 5 FOR TX=46.12639761860937
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 1.5059543211692579
-SRC: 3802
-DST: 6108
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0]
-, pre=4093, cur=1799 to 6108, amount=1.5059543211692579 past= [3802, 3801, 1727, 4093, 1799]
-FINAL FEE= 0.0 of subfees 4 FOR TX=1.5059543211692579
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 354.6240078014355
-SRC: 4355
-DST: 3241
-FEE_AT_SRC: 0.0
-TRIAL: 0
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 101.3988845623649
-SRC: 3014
-DST: 4022
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0]
-, pre=1819, cur=1771 to 4022, amount=31.809754808300646 past= [3014, 1819, 1771]
-FINAL FEE= 0.0 of subfees 2 FOR TX=101.3988845623649
+, pre=4669, cur=4300 to 4825, amount=56.83680395927591 past= [1931, 539, 4669, 4300]
+FINAL FEE= 0.0 of subfees 3 FOR TX=56.836803959275905
 DONE
 
 FAILURE
@@ -125,123 +55,9 @@ FAILURE
 
 
  NEW TX------------
-TX_VAL: 115.00729790341788
-SRC: 2189
-DST: 1299
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0]
-FEE: 0.0  collected_fees: [0.0]
-, pre=2189, cur=1492 to 1299, amount=54.395491748250215 past= [2189, 1492]
-FINAL FEE= 0.0 of subfees 1 FOR TX=115.00729790341788
-DONE
-
-collected_fees: [0.0]
-FEE: 0.0  collected_fees: [0.0]
-, pre=2189, cur=1319 to 1299, amount=60.61180615516766 past= [2189, 1319]
-FINAL FEE= 0.0 of subfees 1 FOR TX=115.00729790341788
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 27.603358957957578
-SRC: 845
-DST: 1159
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0]
-FEE: 0.0  collected_fees: [0.0]
-, pre=845, cur=1377 to 1159, amount=27.603358957957578 past= [845, 1377]
-FINAL FEE= 0.0 of subfees 1 FOR TX=27.603358957957578
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 73.5049910750906
-SRC: 1901
-DST: 4540
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0]
-, pre=1900, cur=2020 to 4540, amount=73.5049910750906 past= [1901, 1900, 2020]
-FINAL FEE= 0.0 of subfees 2 FOR TX=73.5049910750906
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 107.04405708888535
-SRC: 3896
-DST: 4576
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0]
-, pre=1836, cur=1775 to 4576, amount=19.73017760025338 past= [3896, 1836, 1775]
-FINAL FEE= 0.0 of subfees 2 FOR TX=107.04405708888535
-DONE
-
-collected_fees: [0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
-, pre=2303, cur=1771 to 4576, amount=48.30326483585855 past= [3896, 1492, 2303, 1771]
-FINAL FEE= 0.0 of subfees 3 FOR TX=107.04405708888535
-DONE
-
-collected_fees: [0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
-, pre=1682, cur=1750 to 4576, amount=39.01061465277343 past= [3896, 539, 1682, 1750]
-FINAL FEE= 0.0 of subfees 3 FOR TX=107.04405708888535
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 103.78962087129459
-SRC: 5012
-DST: 732
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0]
-, pre=705, cur=733 to 732, amount=22.127085581221596 past= [5012, 539, 1236, 705, 733]
-FINAL FEE= 0.0 of subfees 4 FOR TX=103.78962087129459
-DONE
-
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 36.71348070426523
-SRC: 1324
-DST: 3145
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0]
-, pre=1390, cur=801 to 3145, amount=36.71348070426523 past= [1324, 1033, 1377, 1390, 801]
-FINAL FEE= 0.0 of subfees 4 FOR TX=36.71348070426523
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 196.49772466719975
-SRC: 1371
-DST: 929
+TX_VAL: 190.15280864169677
+SRC: 5653
+DST: 2726
 FEE_AT_SRC: 0.0
 TRIAL: 0
 FAILURE
@@ -249,9 +65,9 @@ FAILURE
 
 
  NEW TX------------
-TX_VAL: 49.10320798932014
-SRC: 1616
-DST: 2138
+TX_VAL: 372.4981318351889
+SRC: 17
+DST: 3226
 FEE_AT_SRC: 0.0
 TRIAL: 0
 FAILURE
@@ -259,1091 +75,41 @@ FAILURE
 
 
  NEW TX------------
-TX_VAL: 24.69035082253279
-SRC: 361
-DST: 2725
-FEE_AT_SRC: 0.0
-TRIAL: 0
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 14.79198470627151
-SRC: 3547
-DST: 1748
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0]
-, pre=1341, cur=516 to 1748, amount=14.79198470627151 past= [3547, 1750, 1741, 1229, 1341, 516]
-FINAL FEE= 0.0 of subfees 5 FOR TX=14.79198470627151
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 46.64331190914751
-SRC: 6013
-DST: 24
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-, pre=46, cur=92 to 24, amount=46.64331190914751 past= [6013, 801, 1682, 2222, 1198, 2923, 1229, 157, 46, 92]
-FINAL FEE= 0.0 of subfees 9 FOR TX=46.64331190914751
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 188.99710318487675
-SRC: 1683
-DST: 3428
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0]
-FEE: 0.0  collected_fees: [0.0]
-, pre=1683, cur=539 to 3428, amount=43.92917398348674 past= [1683, 539]
-FINAL FEE= 0.0 of subfees 1 FOR TX=188.99710318487675
-DONE
-
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 449.07948053755564
-SRC: 4477
-DST: 13
-FEE_AT_SRC: 0.0
-TRIAL: 0
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 127.20756899807334
-SRC: 5620
-DST: 3541
-FEE_AT_SRC: 0.0
-TRIAL: 0
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 80.30752298206914
-SRC: 1600
-DST: 4626
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-, pre=1766, cur=1411 to 4626, amount=80.30752298206914 past= [1600, 539, 1777, 1472, 1492, 1836, 1226, 3506, 1819, 1766, 1411]
-FINAL FEE= 0.0 of subfees 10 FOR TX=80.30752298206914
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 172.92292212393966
-SRC: 5486
-DST: 4874
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0]
-, pre=1770, cur=539 to 4874, amount=152.02348606294476 past= [5486, 1770, 539]
-FINAL FEE= 0.0 of subfees 2 FOR TX=172.92292212393966
-DONE
-
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 61.63190063091025
-SRC: 3936
-DST: 2613
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
-, pre=1523, cur=801 to 2613, amount=33.31331569368801 past= [3936, 1411, 1523, 801]
-FINAL FEE= 0.0 of subfees 3 FOR TX=61.63190063091025
-DONE
-
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 70.52288735161436
-SRC: 3554
-DST: 4217
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0]
-, pre=2607, cur=1836 to 4217, amount=14.858461189902597 past= [3554, 2607, 1836]
-FINAL FEE= 0.0 of subfees 2 FOR TX=70.52288735161436
-DONE
-
-collected_fees: [0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0]
-, pre=1226, cur=1492 to 4217, amount=55.66442616171176 past= [3554, 1226, 1492]
-FINAL FEE= 0.0 of subfees 2 FOR TX=70.52288735161436
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 105.27389853840631
-SRC: 4560
-DST: 3938
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0]
-FEE: 0.0  collected_fees: [0.0]
-, pre=4560, cur=1836 to 3938, amount=105.27389853840631 past= [4560, 1836]
-FINAL FEE= 0.0 of subfees 1 FOR TX=105.27389853840631
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 54.97190483415068
-SRC: 491
-DST: 4648
-FEE_AT_SRC: 0.0
-TRIAL: 0
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 38.141747684199444
-SRC: 726
-DST: 4136
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0]
-, pre=616, cur=1229 to 4136, amount=38.141747684199444 past= [726, 616, 1229]
-FINAL FEE= 0.0 of subfees 2 FOR TX=38.141747684199444
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 106.09565255740235
-SRC: 411
-DST: 2194
-FEE_AT_SRC: 0.0
-TRIAL: 0
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 34.61614388059773
-SRC: 2892
-DST: 3692
-FEE_AT_SRC: 0.0
-TRIAL: 0
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 196.9488329175549
-SRC: 95
-DST: 647
-FEE_AT_SRC: 0.0
-TRIAL: 0
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 2.7469956209608304
-SRC: 4808
-DST: 2340
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
-, pre=2543, cur=1766 to 2340, amount=1.4074289915740497 past= [4808, 1454, 2543, 1766]
-FINAL FEE= 0.0 of subfees 3 FOR TX=2.7469956209608304
-DONE
-
-collected_fees: [0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0]
-, pre=1763, cur=1441 to 2340, amount=0.2038067127370602 past= [4808, 1763, 1441]
-FINAL FEE= 0.0 of subfees 2 FOR TX=2.7469956209608304
-DONE
-
-collected_fees: [0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0]
-, pre=4308, cur=2020 to 2340, amount=1.1357599166497205 past= [4808, 4308, 2020]
-FINAL FEE= 0.0 of subfees 2 FOR TX=2.7469956209608304
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 68.03142354178429
-SRC: 5093
-DST: 4662
-FEE_AT_SRC: 0.0
-TRIAL: 0
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 57.582107050207775
-SRC: 3144
-DST: 5253
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0]
-, pre=2020, cur=1765 to 5253, amount=57.582107050207775 past= [3144, 2020, 1765]
-FINAL FEE= 0.0 of subfees 2 FOR TX=57.582107050207775
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 92.16852214270313
-SRC: 2603
-DST: 5008
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0]
-FEE: 0.0  collected_fees: [0.0]
-, pre=2603, cur=801 to 5008, amount=92.16852214270313 past= [2603, 801]
-FINAL FEE= 0.0 of subfees 1 FOR TX=92.16852214270313
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 6.512503417040199
-SRC: 4044
-DST: 5054
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0]
-, pre=1682, cur=1767 to 5054, amount=6.512503417040199 past= [4044, 1682, 1767]
-FINAL FEE= 0.0 of subfees 2 FOR TX=6.512503417040199
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 86.46105648158445
-SRC: 482
-DST: 1230
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0]
-, pre=466, cur=801 to 1230, amount=86.46105648158445 past= [482, 466, 801]
-FINAL FEE= 0.0 of subfees 2 FOR TX=86.46105648158445
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 56.06116357712796
-SRC: 4007
-DST: 3079
-FEE_AT_SRC: 0.0
-TRIAL: 0
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 73.46865964412318
-SRC: 1945
-DST: 4367
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0]
-FEE: 0.0  collected_fees: [0.0]
-, pre=1945, cur=539 to 4367, amount=40.24546447524992 past= [1945, 539]
-FINAL FEE= 0.0 of subfees 1 FOR TX=73.46865964412318
-DONE
-
-collected_fees: [0.0]
-FEE: 0.0  collected_fees: [0.0]
-, pre=1945, cur=1533 to 4367, amount=33.22319516887326 past= [1945, 1533]
-FINAL FEE= 0.0 of subfees 1 FOR TX=73.46865964412318
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 23.599586026197372
-SRC: 3112
-DST: 4330
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0]
-, pre=539, cur=1682 to 4330, amount=23.599586026197372 past= [3112, 1836, 2719, 539, 1682]
-FINAL FEE= 0.0 of subfees 4 FOR TX=23.599586026197372
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 104.688066053036
-SRC: 3244
-DST: 909
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0]
-, pre=1229, cur=616 to 909, amount=0.7086599795874093 past= [3244, 1229, 616]
-FINAL FEE= 0.0 of subfees 2 FOR TX=104.688066053036
-DONE
-
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 278.6187763602276
-SRC: 5286
-DST: 1517
-FEE_AT_SRC: 0.0
-TRIAL: 0
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 38.276279418675315
-SRC: 1523
-DST: 622
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-, pre=657, cur=623 to 622, amount=38.276279418675315 past= [1523, 91, 29, 1149, 209, 657, 623]
-FINAL FEE= 0.0 of subfees 6 FOR TX=38.276279418675315
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 124.24898890747484
-SRC: 3146
-DST: 4860
-FEE_AT_SRC: 0.0
-TRIAL: 0
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 147.17705258903425
-SRC: 6103
-DST: 2313
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0]
-, pre=1144, cur=1238 to 2313, amount=62.40493380838776 past= [6103, 1533, 1943, 1144, 1238]
-FINAL FEE= 0.0 of subfees 4 FOR TX=147.17705258903425
-DONE
-
-collected_fees: [0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0]
-, pre=801, cur=1768 to 2313, amount=47.093071367489834 past= [6103, 801, 1768]
-FINAL FEE= 0.0 of subfees 2 FOR TX=147.17705258903425
-DONE
-
-collected_fees: [0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0]
-, pre=3038, cur=1229 to 2313, amount=37.67904741315665 past= [6103, 3038, 1229]
-FINAL FEE= 0.0 of subfees 2 FOR TX=147.17705258903425
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 357.6045235574238
-SRC: 3707
-DST: 3034
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0]
-, pre=1765, cur=1750 to 3034, amount=193.99653427492422 past= [3707, 1765, 1750]
-FINAL FEE= 0.0 of subfees 2 FOR TX=357.6045235574238
-DONE
-
-collected_fees: [0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0]
-, pre=1771, cur=2020 to 3034, amount=37.5678985829517 past= [3707, 1771, 2020]
-FINAL FEE= 0.0 of subfees 2 FOR TX=357.6045235574238
-DONE
-
-collected_fees: [0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0]
-, pre=1770, cur=1918 to 3034, amount=126.0400906995479 past= [3707, 1770, 1918]
-FINAL FEE= 0.0 of subfees 2 FOR TX=357.6045235574238
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 175.45430461843284
-SRC: 3940
-DST: 2082
-FEE_AT_SRC: 0.0
-TRIAL: 0
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 124.00102815665635
-SRC: 5555
-DST: 2391
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
-, pre=2539, cur=2020 to 2391, amount=52.78448445726827 past= [5555, 1956, 2539, 2020]
-FINAL FEE= 0.0 of subfees 3 FOR TX=124.00102815665635
-DONE
-
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 35.81467914511043
-SRC: 2148
-DST: 442
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-, pre=516, cur=304 to 442, amount=35.81467914511043 past= [2148, 2498, 1819, 251, 2197, 139, 2363, 127, 1772, 39, 202, 941, 773, 1633, 553, 1768, 849, 402, 1899, 1995, 1682, 1741, 516, 304]
-FINAL FEE= 0.0 of subfees 23 FOR TX=35.81467914511043
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 45.44951552217881
-SRC: 4628
-DST: 443
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0]
-, pre=1135, cur=447 to 443, amount=38.598327530462385 past= [4628, 539, 1411, 1229, 1135, 447]
-FINAL FEE= 0.0 of subfees 5 FOR TX=45.44951552217881
-DONE
-
-collected_fees: [0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
-, pre=15, cur=4 to 443, amount=6.851187991716426 past= [4628, 1492, 15, 4]
-FINAL FEE= 0.0 of subfees 3 FOR TX=45.44951552217881
-DONE
-
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 42.5057426993308
-SRC: 4922
-DST: 3322
-FEE_AT_SRC: 0.0
-TRIAL: 0
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 4.005775480600312
-SRC: 1438
-DST: 2535
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0]
-FEE: 0.0  collected_fees: [0.0]
-, pre=1438, cur=1317 to 2535, amount=4.005775480600312 past= [1438, 1317]
-FINAL FEE= 0.0 of subfees 1 FOR TX=4.005775480600312
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 258.3286653557872
-SRC: 760
-DST: 3887
-FEE_AT_SRC: 0.0
-TRIAL: 0
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 239.38938071803724
-SRC: 413
-DST: 1160
-FEE_AT_SRC: 0.0
-TRIAL: 0
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 247.60443992782743
-SRC: 1606
-DST: 3112
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
-, pre=2111, cur=539 to 3112, amount=183.97265482183408 past= [1606, 1229, 2111, 539]
-FINAL FEE= 0.0 of subfees 3 FOR TX=247.60443992782743
-DONE
-
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 9.61593143271903
-SRC: 1505
-DST: 650
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0]
-, pre=179, cur=630 to 650, amount=9.61593143271903 past= [1505, 307, 145, 179, 630]
-FINAL FEE= 0.0 of subfees 4 FOR TX=9.61593143271903
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 47.63782785018808
-SRC: 2399
-DST: 4005
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0]
-, pre=801, cur=2020 to 4005, amount=47.63782785018808 past= [2399, 801, 2020]
-FINAL FEE= 0.0 of subfees 2 FOR TX=47.63782785018808
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 240.19284845089922
-SRC: 5913
-DST: 3007
-FEE_AT_SRC: 0.0
-TRIAL: 0
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 60.526909959196814
-SRC: 3806
-DST: 5728
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0]
-, pre=1646, cur=2020 to 5728, amount=40.74012109874813 past= [3806, 1646, 2020]
-FINAL FEE= 0.0 of subfees 2 FOR TX=60.526909959196814
-DONE
-
-collected_fees: [0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0]
-, pre=1776, cur=1226 to 5728, amount=19.78678886044868 past= [3806, 1776, 1226]
-FINAL FEE= 0.0 of subfees 2 FOR TX=60.526909959196814
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 712.852268210364
-SRC: 946
-DST: 5660
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
-, pre=1369, cur=1819 to 5660, amount=23.400030694638755 past= [946, 551, 1369, 1819]
-FINAL FEE= 0.0 of subfees 3 FOR TX=712.852268210364
-DONE
-
-collected_fees: [0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
-, pre=727, cur=2020 to 5660, amount=26.83292950611657 past= [946, 716, 727, 2020]
-FINAL FEE= 0.0 of subfees 3 FOR TX=712.852268210364
-DONE
-
-collected_fees: [0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
-, pre=1135, cur=1533 to 5660, amount=38.50104502579185 past= [946, 784, 1135, 1533]
-FINAL FEE= 0.0 of subfees 3 FOR TX=712.852268210364
-DONE
-
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 21.59685303900663
-SRC: 2554
-DST: 1444
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0]
-, pre=1819, cur=1229 to 1444, amount=6.106974334458144 past= [2554, 1819, 1229]
-FINAL FEE= 0.0 of subfees 2 FOR TX=21.59685303900663
-DONE
-
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 230.70261532316468
-SRC: 5342
-DST: 4899
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0]
-, pre=2892, cur=1772 to 4899, amount=230.70261532316468 past= [5342, 2892, 1772]
-FINAL FEE= 0.0 of subfees 2 FOR TX=230.70261532316468
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 337.5238838037372
-SRC: 1236
-DST: 3158
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0]
-FEE: 0.0  collected_fees: [0.0]
-, pre=1236, cur=539 to 3158, amount=118.99344025246053 past= [1236, 539]
-FINAL FEE= 0.0 of subfees 1 FOR TX=337.5238838037372
-DONE
-
-collected_fees: [0.0]
-FEE: 0.0  collected_fees: [0.0]
-, pre=1236, cur=1775 to 3158, amount=151.79206139267794 past= [1236, 1775]
-FINAL FEE= 0.0 of subfees 1 FOR TX=337.5238838037372
-DONE
-
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 18.892822340608898
-SRC: 5709
-DST: 3282
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0]
-, pre=1836, cur=1198 to 3282, amount=10.978384680624348 past= [5709, 5257, 4379, 1836, 1198]
-FINAL FEE= 0.0 of subfees 4 FOR TX=18.892822340608898
-DONE
-
-collected_fees: [0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
-, pre=3608, cur=1229 to 3282, amount=7.91443765998455 past= [5709, 5707, 3608, 1229]
-FINAL FEE= 0.0 of subfees 3 FOR TX=18.892822340608898
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 46.98214428108411
-SRC: 5667
-DST: 832
-FEE_AT_SRC: 0.0
-TRIAL: 0
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 1.2658621040233213
-SRC: 2859
-DST: 3438
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0]
-, pre=2020, cur=1198 to 3438, amount=1.2658621040233213 past= [2859, 2020, 1198]
-FINAL FEE= 0.0 of subfees 2 FOR TX=1.2658621040233213
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 30.076376313887437
-SRC: 4129
-DST: 1408
-FEE_AT_SRC: 0.0
-TRIAL: 0
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 103.09672586084616
-SRC: 4075
-DST: 2954
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0]
-, pre=1758, cur=1912 to 2954, amount=74.36829849374391 past= [4075, 1758, 1912]
-FINAL FEE= 0.0 of subfees 2 FOR TX=103.09672586084616
-DONE
-
-collected_fees: [0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
-, pre=2306, cur=3394 to 2954, amount=28.728427367102263 past= [4075, 1779, 2306, 3394]
-FINAL FEE= 0.0 of subfees 3 FOR TX=103.09672586084616
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 343.02410580073183
-SRC: 2947
-DST: 1788
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0]
-FEE: 0.0  collected_fees: [0.0]
-, pre=2947, cur=539 to 1788, amount=91.514462697481 past= [2947, 539]
-FINAL FEE= 0.0 of subfees 1 FOR TX=343.02410580073183
-DONE
-
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 75.72887277039975
-SRC: 5326
-DST: 4254
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0]
-FEE: 0.0  collected_fees: [0.0]
-, pre=5326, cur=3608 to 4254, amount=32.20210967566639 past= [5326, 3608]
-FINAL FEE= 0.0 of subfees 1 FOR TX=75.72887277039975
-DONE
-
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 285.9002709544861
-SRC: 1710
-DST: 4565
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0]
-FEE: 0.0  collected_fees: [0.0]
-, pre=1710, cur=2020 to 4565, amount=285.9002709544861 past= [1710, 2020]
-FINAL FEE= 0.0 of subfees 1 FOR TX=285.9002709544861
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 473.08644764311254
-SRC: 2786
-DST: 2048
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0]
-, pre=2020, cur=1768 to 2048, amount=147.95891354983857 past= [2786, 2020, 1768]
-FINAL FEE= 0.0 of subfees 2 FOR TX=473.08644764311254
-DONE
-
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 237.2080192341918
-SRC: 1467
-DST: 4519
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
-, pre=1113, cur=539 to 4519, amount=237.2080192341918 past= [1467, 1377, 1113, 539]
-FINAL FEE= 0.0 of subfees 3 FOR TX=237.2080192341918
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 16.87418724089643
-SRC: 6122
-DST: 754
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0]
-, pre=1236, cur=705 to 754, amount=16.87418724089643 past= [6122, 2363, 1313, 1236, 705]
-FINAL FEE= 0.0 of subfees 4 FOR TX=16.87418724089643
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 5.426276085886378
-SRC: 2638
-DST: 5054
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0]
-, pre=5169, cur=1767 to 5054, amount=5.426276085886378 past= [2638, 4167, 1342, 652, 5169, 1767]
-FINAL FEE= 0.0 of subfees 5 FOR TX=5.426276085886378
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 26.96476641008807
-SRC: 1065
-DST: 752
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0]
-, pre=672, cur=654 to 752, amount=26.96476641008807 past= [1065, 672, 654]
-FINAL FEE= 0.0 of subfees 2 FOR TX=26.96476641008807
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 5.30738050869755
-SRC: 1255
-DST: 1689
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
-, pre=2535, cur=1690 to 1689, amount=5.30738050869755 past= [1255, 1229, 2535, 1690]
-FINAL FEE= 0.0 of subfees 3 FOR TX=5.30738050869755
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 10.265901371659554
-SRC: 3771
-DST: 298
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
-, pre=170, cur=202 to 298, amount=3.144194817644749 past= [3771, 1492, 170, 202]
-FINAL FEE= 0.0 of subfees 3 FOR TX=10.265901371659554
-DONE
-
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 302.6341141679612
-SRC: 238
-DST: 1964
-FEE_AT_SRC: 0.0
-TRIAL: 0
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 46.80934620940843
-SRC: 1108
-DST: 3891
-FEE_AT_SRC: 0.0
-TRIAL: 0
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 150.4526193224904
-SRC: 4693
-DST: 1524
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-, pre=5712, cur=1229 to 1524, amount=86.282857548883 past= [4693, 2804, 4810, 5173, 1966, 4152, 5622, 4161, 1313, 1672, 5379, 1557, 5712, 1229]
-FINAL FEE= 0.0 of subfees 13 FOR TX=150.4526193224904
-DONE
-
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 28.643667038827168
-SRC: 6222
-DST: 1127
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0]
-, pre=539, cur=3837 to 1127, amount=28.643667038827168 past= [6222, 6126, 5445, 539, 3837]
-FINAL FEE= 0.0 of subfees 4 FOR TX=28.643667038827168
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 317.26626739443935
-SRC: 4152
-DST: 2701
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0]
-FEE: 0.0  collected_fees: [0.0]
-, pre=4152, cur=1312 to 2701, amount=49.65952298046584 past= [4152, 1312]
-FINAL FEE= 0.0 of subfees 1 FOR TX=317.26626739443935
-DONE
-
-collected_fees: [0.0]
-FEE: 0.0  collected_fees: [0.0]
-, pre=4152, cur=1912 to 2701, amount=48.937025557719195 past= [4152, 1912]
-FINAL FEE= 0.0 of subfees 1 FOR TX=317.26626739443935
-DONE
-
-collected_fees: [0.0]
-FEE: 0.0  collected_fees: [0.0]
-, pre=4152, cur=1238 to 2701, amount=47.61289787270865 past= [4152, 1238]
-FINAL FEE= 0.0 of subfees 1 FOR TX=317.26626739443935
-DONE
-
-collected_fees: [0.0]
-FEE: 0.0  collected_fees: [0.0]
-, pre=4152, cur=655 to 2701, amount=59.14415143579315 past= [4152, 655]
-FINAL FEE= 0.0 of subfees 1 FOR TX=317.26626739443935
-DONE
-
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 15.89417021624509
-SRC: 2451
-DST: 5799
+TX_VAL: 145.6874192660203
+SRC: 2195
+DST: 1171
 FEE_AT_SRC: 0.0
 TRIAL: 0
 collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-, pre=1767, cur=1768 to 5799, amount=15.89417021624509 past= [2451, 1775, 1778, 1781, 3608, 1492, 1767, 1768]
-FINAL FEE= 0.0 of subfees 7 FOR TX=15.89417021624509
+, pre=1741, cur=516 to 1171, amount=98.72533112138879 past= [2195, 961, 1995, 543, 1713, 1742, 1741, 516]
+FINAL FEE= 0.0 of subfees 7 FOR TX=145.6874192660203
+DONE
+
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 125.7151210404043
+SRC: 2293
+DST: 3735
+FEE_AT_SRC: 0.0
+TRIAL: 0
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 98.16335375418238
+SRC: 20
+DST: 1163
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0]
+FEE: 0.0  collected_fees: [0.0]
+, pre=20, cur=2020 to 1163, amount=98.16335375418238 past= [20, 2020]
+FINAL FEE= 0.0 of subfees 1 FOR TX=98.16335375418238
 DONE
 
 SUCCESS
@@ -1351,15 +117,211 @@ SUCCESS
 
 
  NEW TX------------
-TX_VAL: 107.04324180430669
-SRC: 2106
+TX_VAL: 10.60257868196221
+SRC: 507
+DST: 1660
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0]
+, pre=466, cur=1236 to 1660, amount=10.60257868196221 past= [507, 466, 1236]
+FINAL FEE= 0.0 of subfees 2 FOR TX=10.60257868196221
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 53.86215285527056
+SRC: 4823
+DST: 4901
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0]
+, pre=1225, cur=1781 to 4901, amount=53.86215285527056 past= [4823, 1225, 1781]
+FINAL FEE= 0.0 of subfees 2 FOR TX=53.86215285527056
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 102.17018897745231
+SRC: 4355
+DST: 1238
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0]
+FEE: 0.0  collected_fees: [0.0]
+, pre=4355, cur=3395 to 1238, amount=14.033064776890491 past= [4355, 3395]
+FINAL FEE= 0.0 of subfees 1 FOR TX=102.17018897745231
+DONE
+
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 12.426043990351749
+SRC: 530
+DST: 4457
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
+, pre=1176, cur=1198 to 4457, amount=12.426043990351749 past= [530, 44, 1176, 1198]
+FINAL FEE= 0.0 of subfees 3 FOR TX=12.426043990351749
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 30.75593293954892
+SRC: 3306
+DST: 4431
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
+, pre=1492, cur=801 to 4431, amount=13.975243542889967 past= [3306, 1317, 1492, 801]
+FINAL FEE= 0.0 of subfees 3 FOR TX=30.75593293954892
+DONE
+
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 78.48706843380245
+SRC: 2199
+DST: 5912
+FEE_AT_SRC: 0.0
+TRIAL: 0
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 12.873881972127727
+SRC: 5848
+DST: 5209
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
+, pre=6081, cur=5150 to 5209, amount=2.9113633470280487 past= [5848, 801, 6081, 5150]
+FINAL FEE= 0.0 of subfees 3 FOR TX=12.873881972127727
+DONE
+
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 32.80907415506637
+SRC: 5839
+DST: 686
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+, pre=402, cur=665 to 686, amount=32.80907415506637 past= [5839, 1226, 553, 1566, 773, 402, 665]
+FINAL FEE= 0.0 of subfees 6 FOR TX=32.80907415506637
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 142.78341379045142
+SRC: 2634
+DST: 246
+FEE_AT_SRC: 0.0
+TRIAL: 0
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 50.536232260335936
+SRC: 5633
+DST: 1931
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0]
+FEE: 0.0  collected_fees: [0.0]
+, pre=5633, cur=1492 to 1931, amount=50.536232260335936 past= [5633, 1492]
+FINAL FEE= 0.0 of subfees 1 FOR TX=50.536232260335936
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 89.68342013501514
+SRC: 2531
+DST: 2987
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0]
+FEE: 0.0  collected_fees: [0.0]
+, pre=2531, cur=1682 to 2987, amount=17.40526688462505 past= [2531, 1682]
+FINAL FEE= 0.0 of subfees 1 FOR TX=89.68342013501514
+DONE
+
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 158.02616309147484
+SRC: 3880
+DST: 4717
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
+, pre=801, cur=2363 to 4717, amount=46.872076414873476 past= [3880, 1776, 801, 2363]
+FINAL FEE= 0.0 of subfees 3 FOR TX=158.02616309147484
+DONE
+
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 345.1480071465485
+SRC: 69
+DST: 1836
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0]
+, pre=202, cur=255 to 1836, amount=0.6411860845357182 past= [69, 202, 255]
+FINAL FEE= 0.0 of subfees 2 FOR TX=345.1480071465485
+DONE
+
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 22.296701630569544
+SRC: 3719
 DST: 4409
 FEE_AT_SRC: 0.0
 TRIAL: 0
 collected_fees: [0.0, 0.0, 0.0]
 FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
-, pre=1782, cur=1767 to 4409, amount=107.04324180430669 past= [2106, 2020, 1782, 1767]
-FINAL FEE= 0.0 of subfees 3 FOR TX=107.04324180430669
+, pre=4195, cur=1767 to 4409, amount=22.296701630569544 past= [3719, 801, 4195, 1767]
+FINAL FEE= 0.0 of subfees 3 FOR TX=22.296701630569544
 DONE
 
 SUCCESS
@@ -1367,15 +329,63 @@ SUCCESS
 
 
  NEW TX------------
-TX_VAL: 21.297618470727954
-SRC: 866
-DST: 2121
+TX_VAL: 46.482769078416766
+SRC: 4868
+DST: 238
+FEE_AT_SRC: 0.0
+TRIAL: 0
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 96.59705364783011
+SRC: 460
+DST: 434
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0]
+, pre=304, cur=402 to 434, amount=2.5150497216448193 past= [460, 304, 402]
+FINAL FEE= 0.0 of subfees 2 FOR TX=96.59705364783011
+DONE
+
+collected_fees: [0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0]
+, pre=455, cur=654 to 434, amount=94.0820039261853 past= [460, 455, 654]
+FINAL FEE= 0.0 of subfees 2 FOR TX=96.59705364783011
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 76.29901568897743
+SRC: 540
+DST: 436
+FEE_AT_SRC: 0.0
+TRIAL: 0
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 52.569786581841605
+SRC: 3724
+DST: 2751
 FEE_AT_SRC: 0.0
 TRIAL: 0
 collected_fees: [0.0, 0.0, 0.0, 0.0]
 FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0]
-, pre=1236, cur=1300 to 2121, amount=21.297618470727954 past= [866, 593, 705, 1236, 1300]
-FINAL FEE= 0.0 of subfees 4 FOR TX=21.297618470727954
+, pre=1777, cur=1750 to 2751, amount=27.73589421776357 past= [3724, 539, 2020, 1777, 1750]
+FINAL FEE= 0.0 of subfees 4 FOR TX=52.569786581841605
+DONE
+
+collected_fees: [0.0, 0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0]
+, pre=1198, cur=801 to 2751, amount=24.833892364078036 past= [3724, 1229, 1778, 1198, 801]
+FINAL FEE= 0.0 of subfees 4 FOR TX=52.569786581841605
 DONE
 
 SUCCESS
@@ -1383,15 +393,15 @@ SUCCESS
 
 
  NEW TX------------
-TX_VAL: 28.677699745729207
-SRC: 2897
-DST: 3241
+TX_VAL: 62.45565681544342
+SRC: 2607
+DST: 4861
 FEE_AT_SRC: 0.0
 TRIAL: 0
-collected_fees: [0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0]
-, pre=1682, cur=3237 to 3241, amount=28.677699745729207 past= [2897, 1682, 3237]
-FINAL FEE= 0.0 of subfees 2 FOR TX=28.677699745729207
+collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+, pre=539, cur=1766 to 4861, amount=62.45565681544342 past= [2607, 3359, 1836, 1772, 1756, 1411, 539, 1766]
+FINAL FEE= 0.0 of subfees 7 FOR TX=62.45565681544342
 DONE
 
 SUCCESS
@@ -1399,15 +409,37 @@ SUCCESS
 
 
  NEW TX------------
-TX_VAL: 97.64163507994998
-SRC: 5407
-DST: 1310
+TX_VAL: 44.398950336507944
+SRC: 2898
+DST: 594
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
+, pre=808, cur=654 to 594, amount=44.398950336507944 past= [2898, 1682, 808, 654]
+FINAL FEE= 0.0 of subfees 3 FOR TX=44.398950336507944
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 277.1875510605362
+SRC: 4347
+DST: 2404
 FEE_AT_SRC: 0.0
 TRIAL: 0
 collected_fees: [0.0, 0.0, 0.0, 0.0]
 FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0]
-, pre=1335, cur=1309 to 1310, amount=97.64163507994998 past= [5407, 5150, 5379, 1335, 1309]
-FINAL FEE= 0.0 of subfees 4 FOR TX=97.64163507994998
+, pre=4385, cur=2363 to 2404, amount=264.0845352351913 past= [4347, 3394, 1758, 4385, 2363]
+FINAL FEE= 0.0 of subfees 4 FOR TX=277.1875510605362
+DONE
+
+collected_fees: [0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0]
+, pre=539, cur=1334 to 2404, amount=13.103015825344869 past= [4347, 539, 1334]
+FINAL FEE= 0.0 of subfees 2 FOR TX=277.1875510605362
 DONE
 
 SUCCESS
@@ -1415,15 +447,15 @@ SUCCESS
 
 
  NEW TX------------
-TX_VAL: 2.2162566788223748
-SRC: 5408
-DST: 2487
+TX_VAL: 6.592410568868647
+SRC: 2613
+DST: 5852
 FEE_AT_SRC: 0.0
 TRIAL: 0
 collected_fees: [0.0, 0.0, 0.0]
 FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
-, pre=4152, cur=1229 to 2487, amount=2.2162566788223748 past= [5408, 5150, 4152, 1229]
-FINAL FEE= 0.0 of subfees 3 FOR TX=2.2162566788223748
+, pre=6140, cur=5199 to 5852, amount=6.592410568868647 past= [2613, 801, 6140, 5199]
+FINAL FEE= 0.0 of subfees 3 FOR TX=6.592410568868647
 DONE
 
 SUCCESS
@@ -1431,41 +463,15 @@ SUCCESS
 
 
  NEW TX------------
-TX_VAL: 92.46256432769874
-SRC: 2838
-DST: 3321
-FEE_AT_SRC: 0.0
-TRIAL: 0
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 290.38310661912897
-SRC: 1968
-DST: 1527
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-, pre=1220, cur=801 to 1527, amount=290.383106619129 past= [1968, 3394, 1533, 1492, 1456, 1294, 1583, 1646, 539, 2419, 2919, 1790, 1262, 1342, 2249, 1411, 2020, 1229, 1317, 1771, 1750, 1773, 1779, 3761, 1220, 801]
-FINAL FEE= 0.0 of subfees 25 FOR TX=290.38310661912897
-DONE
-
-FAILURE
-
-
-
- NEW TX------------
-TX_VAL: 51.04758370701609
-SRC: 4641
-DST: 596
+TX_VAL: 6.499553926558635
+SRC: 21
+DST: 3606
 FEE_AT_SRC: 0.0
 TRIAL: 0
 collected_fees: [0.0, 0.0, 0.0]
 FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
-, pre=801, cur=160 to 596, amount=51.04758370701609 past= [4641, 1687, 801, 160]
-FINAL FEE= 0.0 of subfees 3 FOR TX=51.04758370701609
+, pre=2020, cur=1769 to 3606, amount=6.499553926558635 past= [21, 20, 2020, 1769]
+FINAL FEE= 0.0 of subfees 3 FOR TX=6.499553926558635
 DONE
 
 SUCCESS
@@ -1473,15 +479,15 @@ SUCCESS
 
 
  NEW TX------------
-TX_VAL: 58.08624641735449
-SRC: 1873
-DST: 5636
+TX_VAL: 8.430103768337622
+SRC: 5206
+DST: 4761
 FEE_AT_SRC: 0.0
 TRIAL: 0
-collected_fees: [0.0]
-FEE: 0.0  collected_fees: [0.0]
-, pre=1873, cur=1779 to 5636, amount=58.08624641735449 past= [1873, 1779]
-FINAL FEE= 0.0 of subfees 1 FOR TX=58.08624641735449
+collected_fees: [0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
+, pre=1836, cur=1756 to 4761, amount=8.430103768337622 past= [5206, 5150, 1836, 1756]
+FINAL FEE= 0.0 of subfees 3 FOR TX=8.430103768337622
 DONE
 
 SUCCESS
@@ -1489,31 +495,15 @@ SUCCESS
 
 
  NEW TX------------
-TX_VAL: 28.171111205164067
-SRC: 443
-DST: 1072
+TX_VAL: 309.6688324702753
+SRC: 3077
+DST: 5441
 FEE_AT_SRC: 0.0
 TRIAL: 0
-collected_fees: [0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0]
-, pre=4, cur=402 to 1072, amount=28.171111205164067 past= [443, 4, 402]
-FINAL FEE= 0.0 of subfees 2 FOR TX=28.171111205164067
-DONE
-
-SUCCESS
-
-
-
- NEW TX------------
-TX_VAL: 111.46709601378475
-SRC: 996
-DST: 3199
-FEE_AT_SRC: 0.0
-TRIAL: 0
-collected_fees: [0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0]
-, pre=1135, cur=1766 to 3199, amount=37.82689247701268 past= [996, 1135, 1766]
-FINAL FEE= 0.0 of subfees 2 FOR TX=111.46709601378475
+collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+, pre=4669, cur=3973 to 5441, amount=71.1208526096947 past= [3077, 1533, 539, 3319, 2636, 4669, 3973]
+FINAL FEE= 0.0 of subfees 6 FOR TX=309.6688324702753
 DONE
 
 FAILURE
@@ -1521,9 +511,9 @@ FAILURE
 
 
  NEW TX------------
-TX_VAL: 388.2477111706311
-SRC: 5429
-DST: 1758
+TX_VAL: 260.66210412655215
+SRC: 3080
+DST: 679
 FEE_AT_SRC: 0.0
 TRIAL: 0
 FAILURE
@@ -1531,15 +521,25 @@ FAILURE
 
 
  NEW TX------------
-TX_VAL: 57.04547319499324
-SRC: 5179
-DST: 622
+TX_VAL: 97.27449826017835
+SRC: 2437
+DST: 2738
 FEE_AT_SRC: 0.0
 TRIAL: 0
-collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0]
-FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0]
-, pre=657, cur=623 to 622, amount=57.04547319499324 past= [5179, 2363, 1198, 209, 657, 623]
-FINAL FEE= 0.0 of subfees 5 FOR TX=57.04547319499324
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 12.680926816032132
+SRC: 6211
+DST: 4184
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0]
+, pre=2807, cur=2020 to 4184, amount=12.680926816032132 past= [6211, 1966, 2049, 2807, 2020]
+FINAL FEE= 0.0 of subfees 4 FOR TX=12.680926816032132
 DONE
 
 SUCCESS
@@ -1547,9 +547,9 @@ SUCCESS
 
 
  NEW TX------------
-TX_VAL: 531.5245118877399
-SRC: 3677
-DST: 3919
+TX_VAL: 350.37040637850765
+SRC: 159
+DST: 3714
 FEE_AT_SRC: 0.0
 TRIAL: 0
 FAILURE
@@ -1557,15 +557,997 @@ FAILURE
 
 
  NEW TX------------
-TX_VAL: 33.31961891251997
-SRC: 1355
-DST: 5311
+TX_VAL: 104.75534430009954
+SRC: 3745
+DST: 5303
 FEE_AT_SRC: 0.0
 TRIAL: 0
 collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-, pre=539, cur=2892 to 5311, amount=33.31961891251997 past= [1355, 3470, 3664, 1772, 3395, 3005, 2020, 801, 539, 2892]
-FINAL FEE= 0.0 of subfees 9 FOR TX=33.31961891251997
+, pre=539, cur=1765 to 5303, amount=95.8117128510793 past= [3745, 1770, 1226, 1756, 1778, 3395, 1492, 2363, 539, 1765]
+FINAL FEE= 0.0 of subfees 9 FOR TX=104.75534430009954
+DONE
+
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 39.373502043217584
+SRC: 2586
+DST: 1940
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0]
+, pre=3394, cur=1995 to 1940, amount=39.373502043217584 past= [2586, 1773, 1317, 3394, 1995]
+FINAL FEE= 0.0 of subfees 4 FOR TX=39.373502043217584
 DONE
 
 SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 66.56391546562607
+SRC: 4266
+DST: 4634
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0]
+, pre=2716, cur=1492 to 4634, amount=13.902126510539956 past= [4266, 1163, 3045, 2363, 2716, 1492]
+FINAL FEE= 0.0 of subfees 5 FOR TX=66.56391546562607
+DONE
+
+collected_fees: [0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0]
+, pre=4152, cur=3801 to 4634, amount=8.355356926420502 past= [4266, 4152, 3801]
+FINAL FEE= 0.0 of subfees 2 FOR TX=66.56391546562607
+DONE
+
+collected_fees: [0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
+, pre=1317, cur=1633 to 4634, amount=16.673609878380596 past= [4266, 1313, 1317, 1633]
+FINAL FEE= 0.0 of subfees 3 FOR TX=66.56391546562607
+DONE
+
+collected_fees: [0.0, 0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0]
+, pre=5297, cur=2111 to 4634, amount=19.820872747536573 past= [4266, 3837, 1543, 5297, 2111]
+FINAL FEE= 0.0 of subfees 4 FOR TX=66.56391546562607
+DONE
+
+collected_fees: [0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0]
+, pre=5499, cur=1922 to 4634, amount=2.5478971572420903 past= [4266, 5499, 1922]
+FINAL FEE= 0.0 of subfees 2 FOR TX=66.56391546562607
+DONE
+
+collected_fees: [0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
+, pre=1294, cur=1635 to 4634, amount=2.8886152105902987 past= [4266, 1836, 1294, 1635]
+FINAL FEE= 0.0 of subfees 3 FOR TX=66.56391546562607
+DONE
+
+collected_fees: [0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0]
+, pre=3398, cur=1779 to 4634, amount=2.375437034916054 past= [4266, 3398, 1779]
+FINAL FEE= 0.0 of subfees 2 FOR TX=66.56391546562607
+DONE
+
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 149.8605585052711
+SRC: 4591
+DST: 3907
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0]
+, pre=1492, cur=1769 to 3907, amount=87.55066248864193 past= [4591, 1492, 1769]
+FINAL FEE= 0.0 of subfees 2 FOR TX=149.8605585052711
+DONE
+
+collected_fees: [0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0]
+, pre=6106, cur=3347 to 3907, amount=50.16548937435816 past= [4591, 6106, 3347]
+FINAL FEE= 0.0 of subfees 2 FOR TX=149.8605585052711
+DONE
+
+collected_fees: [0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0]
+, pre=3394, cur=1226 to 3907, amount=12.144406642270994 past= [4591, 3394, 1226]
+FINAL FEE= 0.0 of subfees 2 FOR TX=149.8605585052711
+DONE
+
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 45.534528943365665
+SRC: 39
+DST: 4959
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0]
+, pre=1772, cur=1226 to 4959, amount=42.26098585056391 past= [39, 1772, 1226]
+FINAL FEE= 0.0 of subfees 2 FOR TX=45.534528943365665
+DONE
+
+collected_fees: [0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0]
+, pre=4669, cur=1491 to 4959, amount=3.2735430928017486 past= [39, 4669, 1491]
+FINAL FEE= 0.0 of subfees 2 FOR TX=45.534528943365665
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 12.022514513164154
+SRC: 5583
+DST: 3189
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
+, pre=2498, cur=1682 to 3189, amount=12.022514513164154 past= [5583, 2363, 2498, 1682]
+FINAL FEE= 0.0 of subfees 3 FOR TX=12.022514513164154
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 72.45876011181578
+SRC: 5993
+DST: 6243
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0]
+, pre=1473, cur=1226 to 6243, amount=72.45876011181578 past= [5993, 1473, 1226]
+FINAL FEE= 0.0 of subfees 2 FOR TX=72.45876011181578
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 40.35617629987518
+SRC: 5891
+DST: 1723
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0]
+, pre=4972, cur=801 to 1723, amount=40.35617629987518 past= [5891, 4972, 801]
+FINAL FEE= 0.0 of subfees 2 FOR TX=40.35617629987518
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 320.52496570726095
+SRC: 3993
+DST: 5239
+FEE_AT_SRC: 0.0
+TRIAL: 0
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 0.05876523734121252
+SRC: 4861
+DST: 126
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0]
+, pre=202, cur=88 to 126, amount=0.05876523734121252 past= [4861, 1766, 539, 170, 202, 88]
+FINAL FEE= 0.0 of subfees 5 FOR TX=0.05876523734121252
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 30.210058615209356
+SRC: 3473
+DST: 655
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0]
+, pre=1411, cur=4385 to 655, amount=23.929053904338108 past= [3473, 1411, 4385]
+FINAL FEE= 0.0 of subfees 2 FOR TX=30.210058615209356
+DONE
+
+collected_fees: [0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0]
+, pre=170, cur=1198 to 655, amount=6.281004710871248 past= [3473, 170, 1198]
+FINAL FEE= 0.0 of subfees 2 FOR TX=30.210058615209356
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 117.51827223298952
+SRC: 2797
+DST: 363
+FEE_AT_SRC: 0.0
+TRIAL: 0
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 3.9701390138528794
+SRC: 4341
+DST: 5292
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0]
+, pre=6081, cur=5150 to 5292, amount=3.9701390138528794 past= [4341, 1682, 4152, 1411, 6081, 5150]
+FINAL FEE= 0.0 of subfees 5 FOR TX=3.9701390138528794
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 73.82223700495885
+SRC: 1026
+DST: 719
+FEE_AT_SRC: 0.0
+TRIAL: 0
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 42.729953600923544
+SRC: 5507
+DST: 1250
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0]
+, pre=616, cur=901 to 1250, amount=42.729953600923544 past= [5507, 3233, 539, 1229, 616, 901]
+FINAL FEE= 0.0 of subfees 5 FOR TX=42.729953600923544
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 20.06690838548036
+SRC: 1458
+DST: 1366
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0]
+, pre=551, cur=1312 to 1366, amount=20.06690838548036 past= [1458, 551, 1312]
+FINAL FEE= 0.0 of subfees 2 FOR TX=20.06690838548036
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 11.566211282469768
+SRC: 4247
+DST: 4479
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
+, pre=4161, cur=4437 to 4479, amount=11.566211282469768 past= [4247, 1229, 4161, 4437]
+FINAL FEE= 0.0 of subfees 3 FOR TX=11.566211282469768
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 31.745869360067687
+SRC: 3734
+DST: 2523
+FEE_AT_SRC: 0.0
+TRIAL: 0
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 26.306414032371904
+SRC: 2677
+DST: 3968
+FEE_AT_SRC: 0.0
+TRIAL: 0
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 8.910953595854094
+SRC: 509
+DST: 1664
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0]
+, pre=1229, cur=1652 to 1664, amount=8.910953595854094 past= [509, 466, 2018, 1229, 1652]
+FINAL FEE= 0.0 of subfees 4 FOR TX=8.910953595854094
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 233.45599281624825
+SRC: 3630
+DST: 5706
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0]
+FEE: 0.0  collected_fees: [0.0]
+, pre=3630, cur=1198 to 5706, amount=26.585460047105308 past= [3630, 1198]
+FINAL FEE= 0.0 of subfees 1 FOR TX=233.45599281624825
+DONE
+
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 219.94238399257785
+SRC: 3198
+DST: 3507
+FEE_AT_SRC: 0.0
+TRIAL: 0
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 35.61414026309212
+SRC: 2572
+DST: 4274
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
+, pre=1492, cur=2250 to 4274, amount=35.61414026309212 past= [2572, 539, 1492, 2250]
+FINAL FEE= 0.0 of subfees 3 FOR TX=35.61414026309212
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 127.4685491523513
+SRC: 3247
+DST: 4959
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
+, pre=2020, cur=1758 to 4959, amount=40.77128830791678 past= [3247, 2020, 1758]
+FINAL FEE= 0.0 of subfees 3 FOR TX=127.4685491523513
+DONE
+
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 63.74106601348364
+SRC: 6000
+DST: 6247
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0]
+, pre=1766, cur=3730 to 6247, amount=63.74106601348364 past= [6000, 4762, 1223, 2222, 1766, 3730]
+FINAL FEE= 0.0 of subfees 5 FOR TX=63.74106601348364
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 18.008218585027887
+SRC: 161
+DST: 2241
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
+, pre=35, cur=6240 to 2241, amount=18.008218585027887 past= [161, 6, 35, 6240]
+FINAL FEE= 0.0 of subfees 3 FOR TX=18.008218585027887
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 428.4620572946853
+SRC: 1441
+DST: 1478
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0]
+FEE: 0.0  collected_fees: [0.0]
+, pre=1441, cur=1229 to 1478, amount=12.157551973307369 past= [1441, 1229]
+FINAL FEE= 0.0 of subfees 1 FOR TX=428.4620572946853
+DONE
+
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 2.4646727334199507
+SRC: 223
+DST: 3945
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0]
+, pre=466, cur=801 to 3945, amount=2.4646727334199507 past= [223, 466, 801]
+FINAL FEE= 0.0 of subfees 2 FOR TX=2.4646727334199507
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 157.3514082330201
+SRC: 1877
+DST: 63
+FEE_AT_SRC: 0.0
+TRIAL: 0
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 1.7495202139774957
+SRC: 5205
+DST: 1673
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
+, pre=1836, cur=782 to 1673, amount=1.7495202139774957 past= [5205, 5150, 1836, 782]
+FINAL FEE= 0.0 of subfees 3 FOR TX=1.7495202139774957
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 25.906696019179282
+SRC: 2562
+DST: 467
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
+, pre=2382, cur=466 to 467, amount=25.906696019179282 past= [2562, 2020, 2382, 466]
+FINAL FEE= 0.0 of subfees 3 FOR TX=25.906696019179282
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 249.22511457763682
+SRC: 5147
+DST: 5430
+FEE_AT_SRC: 0.0
+TRIAL: 0
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 0.20086668944228037
+SRC: 5408
+DST: 754
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0]
+, pre=759, cur=705 to 754, amount=0.20086668944228037 past= [5408, 5150, 4152, 759, 705]
+FINAL FEE= 0.0 of subfees 4 FOR TX=0.20086668944228037
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 48.733151649597275
+SRC: 6087
+DST: 944
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+, pre=1341, cur=516 to 944, amount=48.733151649597275 past= [6087, 6099, 1779, 1995, 1220, 1229, 1341, 516]
+FINAL FEE= 0.0 of subfees 7 FOR TX=48.733151649597275
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 108.5791388926385
+SRC: 4068
+DST: 3269
+FEE_AT_SRC: 0.0
+TRIAL: 0
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 246.65621084721622
+SRC: 4782
+DST: 4804
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+, pre=1819, cur=3702 to 4804, amount=130.8892040901409 past= [4782, 1411, 539, 1781, 1819, 3702]
+FINAL FEE= 0.0 of subfees 6 FOR TX=246.65621084721622
+DONE
+
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 129.53072982765775
+SRC: 1202
+DST: 5995
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0]
+FEE: 0.0  collected_fees: [0.0]
+, pre=1202, cur=801 to 5995, amount=129.53072982765775 past= [1202, 801]
+FINAL FEE= 0.0 of subfees 1 FOR TX=129.53072982765775
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 48.30050618904362
+SRC: 6167
+DST: 1176
+FEE_AT_SRC: 0.0
+TRIAL: 0
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 258.4734676536573
+SRC: 1306
+DST: 5589
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
+, pre=539, cur=2923 to 5589, amount=121.40967047330737 past= [1306, 1838, 539, 2923]
+FINAL FEE= 0.0 of subfees 3 FOR TX=258.4734676536573
+DONE
+
+collected_fees: [0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
+, pre=3837, cur=4669 to 5589, amount=137.06379718034992 past= [1306, 2610, 3837, 4669]
+FINAL FEE= 0.0 of subfees 3 FOR TX=258.4734676536573
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 254.50131024163997
+SRC: 5199
+DST: 1100
+FEE_AT_SRC: 0.0
+TRIAL: 0
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 445.6676826486461
+SRC: 1191
+DST: 1767
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0]
+FEE: 0.0  collected_fees: [0.0]
+, pre=1191, cur=539 to 1767, amount=48.83662407320407 past= [1191, 539]
+FINAL FEE= 0.0 of subfees 1 FOR TX=445.6676826486461
+DONE
+
+collected_fees: [0.0]
+FEE: 0.0  collected_fees: [0.0]
+, pre=1191, cur=1633 to 1767, amount=140.34307325654243 past= [1191, 1633]
+FINAL FEE= 0.0 of subfees 1 FOR TX=445.6676826486461
+DONE
+
+collected_fees: [0.0]
+FEE: 0.0  collected_fees: [0.0]
+, pre=1191, cur=3611 to 1767, amount=47.154196862185074 past= [1191, 3611]
+FINAL FEE= 0.0 of subfees 1 FOR TX=445.6676826486461
+DONE
+
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 31.88353370563447
+SRC: 1976
+DST: 4686
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0]
+, pre=1773, cur=1750 to 4686, amount=31.88353370563447 past= [1976, 1773, 1750]
+FINAL FEE= 0.0 of subfees 2 FOR TX=31.88353370563447
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 42.3172648056102
+SRC: 4227
+DST: 518
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
+, pre=170, cur=630 to 518, amount=42.3172648056102 past= [4227, 1341, 170, 630]
+FINAL FEE= 0.0 of subfees 3 FOR TX=42.3172648056102
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 40.82120197681616
+SRC: 758
+DST: 3724
+FEE_AT_SRC: 0.0
+TRIAL: 0
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 29.180727262992427
+SRC: 4797
+DST: 3164
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0]
+, pre=2935, cur=1672 to 3164, amount=14.779775407838407 past= [4797, 2935, 1672]
+FINAL FEE= 0.0 of subfees 2 FOR TX=29.180727262992427
+DONE
+
+collected_fees: [0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0]
+, pre=3608, cur=4011 to 3164, amount=14.40095185515402 past= [4797, 3608, 4011]
+FINAL FEE= 0.0 of subfees 2 FOR TX=29.180727262992427
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 34.98526351419978
+SRC: 2704
+DST: 2823
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
+, pre=2020, cur=2535 to 2823, amount=34.98526351419978 past= [2704, 2694, 2020, 2535]
+FINAL FEE= 0.0 of subfees 3 FOR TX=34.98526351419978
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 84.40319939858551
+SRC: 68
+DST: 5108
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0]
+, pre=127, cur=2363 to 5108, amount=19.465623159929503 past= [68, 50, 196, 127, 2363]
+FINAL FEE= 0.0 of subfees 4 FOR TX=84.40319939858551
+DONE
+
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 133.4878674119949
+SRC: 2025
+DST: 3258
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0]
+, pre=4669, cur=1411 to 3258, amount=133.4878674119949 past= [2025, 1236, 1819, 539, 4669, 1411]
+FINAL FEE= 0.0 of subfees 5 FOR TX=133.4878674119949
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 240.55690766865231
+SRC: 730
+DST: 4585
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+, pre=1799, cur=4487 to 4585, amount=176.58038236534912 past= [730, 1836, 1236, 1226, 1411, 1223, 1912, 1543, 1198, 1819, 1776, 1778, 5297, 1777, 1492, 2020, 1739, 5691, 1799, 4487]
+FINAL FEE= 0.0 of subfees 19 FOR TX=240.55690766865231
+DONE
+
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 72.67684312575345
+SRC: 1514
+DST: 3514
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0]
+, pre=1229, cur=3396 to 3514, amount=72.67684312575345 past= [1514, 1229, 3396]
+FINAL FEE= 0.0 of subfees 2 FOR TX=72.67684312575345
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 4.018295841296788
+SRC: 2607
+DST: 1108
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0]
+, pre=466, cur=35 to 1108, amount=1.0312405536015274 past= [2607, 2951, 2624, 466, 35]
+FINAL FEE= 0.0 of subfees 4 FOR TX=4.018295841296788
+DONE
+
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 42.748228312921896
+SRC: 768
+DST: 3162
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0]
+, pre=1836, cur=3077 to 3162, amount=42.748228312921896 past= [768, 705, 255, 1836, 3077]
+FINAL FEE= 0.0 of subfees 4 FOR TX=42.748228312921896
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 18.040830305291816
+SRC: 2422
+DST: 4103
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0]
+FEE: 0.0  collected_fees: [0.0]
+, pre=2422, cur=3398 to 4103, amount=18.040830305291816 past= [2422, 3398]
+FINAL FEE= 0.0 of subfees 1 FOR TX=18.040830305291816
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 72.6501595112745
+SRC: 2202
+DST: 2389
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+, pre=1836, cur=1229 to 2389, amount=54.14280475675578 past= [2202, 2697, 3458, 1492, 4669, 3608, 539, 1836, 1229]
+FINAL FEE= 0.0 of subfees 8 FOR TX=72.6501595112745
+DONE
+
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 69.96682588210655
+SRC: 1525
+DST: 5599
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0]
+, pre=1766, cur=2363 to 5599, amount=69.96682588210655 past= [1525, 1492, 1758, 1767, 1766, 2363]
+FINAL FEE= 0.0 of subfees 5 FOR TX=69.96682588210655
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 37.83889730077104
+SRC: 4856
+DST: 4338
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+, pre=3026, cur=1510 to 4338, amount=37.83889730077104 past= [4856, 1523, 801, 1393, 3608, 3026, 1510]
+FINAL FEE= 0.0 of subfees 6 FOR TX=37.83889730077104
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 170.05212265600403
+SRC: 5495
+DST: 5277
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+, pre=5379, cur=5150 to 5277, amount=140.53981259821077 past= [5495, 3928, 4268, 4152, 2363, 5365, 1226, 5379, 5150]
+FINAL FEE= 0.0 of subfees 8 FOR TX=170.05212265600403
+DONE
+
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 14.872989564875033
+SRC: 4884
+DST: 2121
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
+, pre=1646, cur=1300 to 2121, amount=14.872989564875033 past= [4884, 1226, 1646, 1300]
+FINAL FEE= 0.0 of subfees 3 FOR TX=14.872989564875033
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 168.24345192807928
+SRC: 5232
+DST: 3437
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
+, pre=5651, cur=2363 to 3437, amount=46.756957724424154 past= [5232, 4993, 5651, 2363]
+FINAL FEE= 0.0 of subfees 3 FOR TX=168.24345192807928
+DONE
+
+collected_fees: [0.0, 0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0, 0.0]
+, pre=4385, cur=1533 to 3437, amount=121.48649420365513 past= [5232, 5199, 4385, 1533]
+FINAL FEE= 0.0 of subfees 3 FOR TX=168.24345192807928
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 317.27903132001876
+SRC: 4839
+DST: 5604
+FEE_AT_SRC: 0.0
+TRIAL: 0
+FAILURE
+
+
+
+ NEW TX------------
+TX_VAL: 24.209925671945623
+SRC: 4847
+DST: 54
+FEE_AT_SRC: 0.0
+TRIAL: 0
+collected_fees: [0.0, 0.0]
+FEE: 0.0  collected_fees: [0.0, 0.0]
+, pre=1836, cur=55 to 54, amount=24.209925671945623 past= [4847, 1836, 55]
+FINAL FEE= 0.0 of subfees 2 FOR TX=24.209925671945623
+DONE
+
+SUCCESS
+
+
+
+ NEW TX------------
+TX_VAL: 183.8982203122539
+SRC: 53
+DST: 2824
+FEE_AT_SRC: 0.0
+TRIAL: 0
+FAILURE

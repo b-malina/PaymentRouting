@@ -65,8 +65,9 @@ public class BasicFee extends FeeComputation {
 			minValInterval = 0.6;
 		}
 		double normalized = normalize(sd, getMin(outValues), getMax(outValues), minValInterval, maxValInterval);
+
 		if (t != -1)
-			normalized *= this.hops;
+			normalized /= (this.hops + 1);
 //		if (normalized > 0)
 //			normalized *= this.feeRate;
 
